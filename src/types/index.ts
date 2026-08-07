@@ -133,8 +133,11 @@ export interface EducationItem {
   id: string;
   degree: string;
   institution: string;
+  /** Optional: city / affiliating university. */
+  location?: string;
   period: string;
-  score: string;
+  /** Omit entirely rather than showing a placeholder for an unknown score. */
+  score?: string;
   focus: string[];
 }
 

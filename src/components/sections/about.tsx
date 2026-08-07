@@ -256,8 +256,12 @@ export function About() {
                   <p className="text-secondary-soft mt-0.5 text-sm">
                     {edu.institution}
                   </p>
+                  {edu.location && (
+                    <p className="text-subtle mt-0.5 text-xs">{edu.location}</p>
+                  )}
                   <p className="text-subtle mt-1 text-xs">
-                    {edu.period} · {edu.score}
+                    {edu.period}
+                    {edu.score ? ` · ${edu.score}` : ""}
                   </p>
                   <div className="mt-3 flex flex-wrap gap-1.5">
                     {edu.focus.map((topic) => (

@@ -19,7 +19,7 @@ import type { EducationItem, FunFact, Stat, TimelineItem } from "@/types";
  * click, and it sets up interviews you can actually win.
  */
 export const BIO_PARAGRAPHS: string[] = [
-  "I'm Abdullah Khatri, a Full Stack Developer from Gujarat, India, currently studying Computer Science and building web applications end to end — from database schemas and API layers through to the interface.",
+  "I'm Abdullah Khatri, a Full Stack Developer from Gujarat, India, currently studying Information Technology and building web applications end to end — from database schemas and API layers through to the interface.",
   "I learn by shipping complete systems rather than tutorials. That has meant working through the parts most side projects skip: role-based authentication, payment integration with signature verification, commission splitting across vendors, GST-compliant invoicing, and normalising a database properly instead of bolting tables together.",
   "Most of my work sits in the React, Next.js, Express and SQL ecosystem. I'm actively looking for internships, entry-level roles and freelance work where I can learn from people more experienced than me and contribute real code.",
 ];
@@ -107,17 +107,18 @@ export const JOURNEY: TimelineItem[] = [
 ];
 
 /**
- * TODO: replace the institution names, periods and scores below with your
- * real academic details. These are placeholders — an incorrect CGPA is easy
- * for an employer to catch during verification.
+ * `score` is optional — the UI omits it entirely when absent, which is far
+ * better than displaying a placeholder or an unverifiable figure. Add your
+ * real CGPA and school details when you have them to hand.
  */
 export const EDUCATION: EducationItem[] = [
   {
     id: "edu-btech",
-    degree: "B.Tech — Computer Science & Engineering",
-    institution: "Your University Name",
+    degree: "B.E. — Information Technology",
+    institution: "C.K. Pithawala College of Engineering & Technology",
+    location: "Surat, Gujarat · Gujarat Technological University",
     period: "2022 — 2026",
-    score: "Add your CGPA",
+    score: "CGPA 8.40 / 10",
     focus: [
       "Data Structures & Algorithms",
       "Database Management Systems",
@@ -127,12 +128,18 @@ export const EDUCATION: EducationItem[] = [
     ],
   },
   {
-    id: "edu-hsc",
-    degree: "Higher Secondary — Science (PCM)",
-    institution: "Your School Name",
-    period: "2020 — 2022",
-    score: "Add your percentage",
-    focus: ["Mathematics", "Physics", "Computer Fundamentals"],
+    id: "edu-diploma",
+    degree: "Diploma — Information Technology",
+    institution: "Government Polytechnic Valsad",
+    location: "Valsad, Gujarat",
+    period: "2019 — 2022",
+    score: "CGPA 8.80 / 10",
+    focus: [
+      "Advanced Database",
+      "JavaScript",
+      "Web Development",
+      "Cyber Security",
+    ],
   },
 ];
 
@@ -179,7 +186,7 @@ export const HIGHLIGHTS: {
   {
     title: "Study Alongside Building",
     description:
-      "Balancing a Computer Science degree with self-directed project work, applying coursework like DBMS directly to real builds.",
+      "Balancing an Information Technology degree with self-directed project work, applying coursework like DBMS and web development directly to real builds.",
     icon: GraduationCap,
   },
   {
