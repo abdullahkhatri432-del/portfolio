@@ -11,7 +11,7 @@ const env = (key: string, fallback: string) => {
 
 export const GITHUB_USERNAME = env(
   "NEXT_PUBLIC_GITHUB_USERNAME",
-  "abdullahkhatri",
+  "abdullahkhatri432-del",
 );
 
 export const LINKEDIN_USERNAME = env(
