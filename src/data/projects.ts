@@ -279,7 +279,7 @@ export const PROJECTS: Project[] = [
     tagline: "Interactive 3D Globe",
     category: "3D / Data Visualisation",
     year: "2026",
-    status: "Completed",
+    status: "Live",
     featured: true,
     description:
       "A WebGL Earth built with React Three Fiber. Click any of 249 countries for live GDP from the World Bank, real-time weather, and a travel planner — all working without a single API key.",
@@ -314,6 +314,49 @@ export const PROJECTS: Project[] = [
     image: "/projects/world-explorer.svg",
     links: {
       github: `${siteConfig.links.github}/world-explorer`,
+      demo: "https://world-explorer-orpin.vercel.app",
+    },
+  },
+  {
+    id: "hospital-erp",
+    slug: "hospital-erp",
+    title: "Meridian Hospital ERP",
+    tagline: "Clinical Decision Support System",
+    category: "Enterprise / Healthcare",
+    year: "2026",
+    status: "Completed",
+    featured: true,
+    description:
+      "An eight-module hospital management system with a working clinical decision support layer — NEWS2 early-warning scoring and a live prescription safety engine checking allergies, interactions and duplication.",
+    longDescription:
+      "Meridian covers the operational surface of a hospital across eight modules, but its centre of gravity is the clinical rules engine. It implements NEWS2 in full — the National Early Warning Score published by the Royal College of Physicians in 2017 and used across the NHS — scoring seven physiological parameters against the official thresholds, including the single-parameter red-flag rule that mandates escalation regardless of the aggregate total. Alongside it runs a prescription safety engine with four independent rule sets: allergy cross-reference including cross-sensitivity groups, drug-drug interaction lookup against both the new prescription and existing medication, therapeutic duplication detection, and stock and batch-expiry validation. Invoice arithmetic is performed in integer paise rather than floats, because rounding drift is unacceptable on a patient bill. I deliberately did not build an LLM diagnosis assistant: models hallucinate, cannot be audited, and diagnostic software is a regulated medical device in most jurisdictions — deterministic published algorithms are the defensible choice.",
+    features: [
+      "Full NEWS2 implementation with per-parameter score decomposition",
+      "Single-parameter red-flag escalation rule per the RCP specification",
+      "Live prescription safety engine with four independent rule sets",
+      "Allergy cross-sensitivity matching across drug classes",
+      "Drug interaction checking against new and existing medication",
+      "Invoice arithmetic in integer paise to eliminate float rounding drift",
+      "Lab analytes flagged and positioned against reference ranges",
+      "Eight modules: patients, appointments, lab, pharmacy, billing, insurance, staff",
+    ],
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Clinical Algorithms",
+      "Rules Engine",
+    ],
+    metrics: [
+      { label: "Modules", value: "8" },
+      { label: "Safety Rules", value: "4" },
+      { label: "NEWS2 Params", value: "7" },
+    ],
+    gradient: "from-teal-500/25 via-sky-500/10 to-transparent",
+    accent: "#14B8A6",
+    image: "/projects/hospital-erp.svg",
+    links: {
+      github: `${siteConfig.links.github}/hospital-erp`,
     },
   },
   {
