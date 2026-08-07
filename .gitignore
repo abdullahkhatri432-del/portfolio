@@ -47,3 +47,6 @@ next-env.d.ts
 
 # keep the env template tracked
 !.env.example
+
+# local deployment notes (contains secrets)
+VERCEL-ENV.txt
