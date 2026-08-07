@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-label="Multi-Vendor Marketplace vendor dashboard preview">
+  <defs>
+    <linearGradient id="mk-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2A0F2E"/>
+      <stop offset="55%" stop-color="#0A0F24"/>
+      <stop offset="100%" stop-color="#050816"/>
+    </linearGradient>
+    <linearGradient id="mk-brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F472B6"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+    <linearGradient id="mk-bar" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#F472B6" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#F472B6"/>
+    </linearGradient>
+    <radialGradient id="mk-glow" cx="18%" cy="14%" r="60%">
+      <stop offset="0%" stop-color="#F472B6" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#F472B6" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="mk-grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#94A3B8" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#mk-bg)"/>
+  <rect width="1200" height="750" fill="url(#mk-grid)"/>
+  <rect width="1200" height="750" fill="url(#mk-glow)"/>
+
+  <!-- Browser chrome -->
+  <rect x="80" y="70" width="1040" height="610" rx="22" fill="#0B1024" stroke="#FFFFFF" stroke-opacity="0.10"/>
+  <rect x="80" y="70" width="1040" height="52" rx="22" fill="#17102B"/>
+  <rect x="80" y="104" width="1040" height="18" fill="#17102B"/>
+  <circle cx="112" cy="96" r="6" fill="#EF4444" opacity="0.8"/>
+  <circle cx="134" cy="96" r="6" fill="#F59E0B" opacity="0.8"/>
+  <circle cx="156" cy="96" r="6" fill="#22C55E" opacity="0.8"/>
+  <rect x="190" y="86" width="360" height="20" rx="10" fill="#0A0F24" stroke="#FFFFFF" stroke-opacity="0.07"/>
+  <text x="206" y="101" font-family="monospace" font-size="12" fill="#64748B">marketplace-eta-rose.vercel.app/vendor</text>
+
+  <!-- Role switcher -->
+  <rect x="104" y="142" width="992" height="46" rx="14" fill="#140E26"/>
+  <rect x="118" y="152" width="106" height="26" rx="13" fill="#F472B6" opacity="0.28"/>
+  <text x="171" y="169" font-family="'Segoe UI',sans-serif" font-size="11" font-weight="600" fill="#FBCFE8" text-anchor="middle">VENDOR</text>
+  <text x="252" y="169" font-family="'Segoe UI',sans-serif" font-size="11" fill="#64748B">ADMIN</text>
+  <text x="318" y="169" font-family="'Segoe UI',sans-serif" font-size="11" fill="#64748B">WHOLESALER</text>
+  <text x="424" y="169" font-family="'Segoe UI',sans-serif" font-size="11" fill="#64748B">CUSTOMER</text>
+  <rect x="920" y="152" width="160" height="26" rx="13" fill="#FFFFFF" opacity="0.06"/>
+  <text x="1000" y="169" font-family="'Segoe UI',sans-serif" font-size="11" fill="#CBD5E1" text-anchor="middle">4 role dashboards</text>
+
+  <!-- KPI cards -->
+  <g>
+    <rect x="104" y="204" width="238" height="112" rx="16" fill="#140E26" stroke="#FFFFFF" stroke-opacity="0.07"/>
+    <text x="126" y="238" font-family="'Segoe UI',sans-serif" font-size="12" fill="#64748B">Vendor Payouts</text>
+    <text x="126" y="274" font-family="'Segoe UI',sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">₹4,18,600</text>
+    <text x="126" y="297" font-family="'Segoe UI',sans-serif" font-size="11" fill="#22C55E">▲ settled weekly</text>
+
+    <rect x="356" y="204" width="238" height="112" rx="16" fill="#140E26" stroke="#FFFFFF" stroke-opacity="0.07"/>
+    <text x="378" y="238" font-family="'Segoe UI',sans-serif" font-size="12" fill="#64748B">Active Vendors</text>
+    <text x="378" y="274" font-family="'Segoe UI',sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">126</text>
+    <text x="378" y="297" font-family="'Segoe UI',sans-serif" font-size="11" fill="#A78BFA">● 14 pending KYC</text>
+
+    <rect x="608" y="204" width="238" height="112" rx="16" fill="#140E26" stroke="#FFFFFF" stroke-opacity="0.07"/>
+    <text x="630" y="238" font-family="'Segoe UI',sans-serif" font-size="12" fill="#64748B">Orders Today</text>
+    <text x="630" y="274" font-family="'Segoe UI',sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">348</text>
+    <text x="630" y="297" font-family="'Segoe UI',sans-serif" font-size="11" fill="#22C55E">▲ 12.6%</text>
+
+    <rect x="860" y="204" width="236" height="112" rx="16" fill="#140E26" stroke="#FFFFFF" stroke-opacity="0.07"/>
+    <text x="882" y="238" font-family="'Segoe UI',sans-serif" font-size="12" fill="#64748B">Commission</text>
+    <text x="882" y="274" font-family="'Segoe UI',sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">₹52,340</text>
+    <text x="882" y="297" font-family="'Segoe UI',sans-serif" font-size="11" fill="#F472B6">auto fee split</text>
+  </g>
+
+  <!-- Bar chart -->
+  <rect x="104" y="340" width="600" height="252" rx="16" fill="#140E26" stroke="#FFFFFF" stroke-opacity="0.07"/>
+  <text x="126" y="374" font-family="'Segoe UI',sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">Vendor Sales Split</text>
+  <g stroke="#94A3B8" stroke-opacity="0.08" stroke-width="1">
+    <line x1="126" y1="556" x2="682" y2="556"/><line x1="126" y1="500" x2="682" y2="500"/><line x1="126" y1="444" x2="682" y2="444"/>
+  </g>
+  <g fill="url(#mk-bar)">
+    <rect x="148" y="452" width="38" height="104" rx="6"/>
+    <rect x="212" y="418" width="38" height="138" rx="6"/>
+    <rect x="276" y="474" width="38" height="82" rx="6"/>
+    <rect x="340" y="396" width="38" height="160" rx="6"/>
+    <rect x="404" y="440" width="38" height="116" rx="6"/>
+    <rect x="468" y="408" width="38" height="148" rx="6"/>
+    <rect x="532" y="462" width="38" height="94" rx="6"/>
+    <rect x="596" y="384" width="38" height="172" rx="6"/>
+  </g>
+  <g font-family="'Segoe UI',sans-serif" font-size="10" fill="#475569">
+    <text x="167" y="574" text-anchor="middle">V1</text><text x="231" y="574" text-anchor="middle">V2</text><text x="295" y="574" text-anchor="middle">V3</text><text x="359" y="574" text-anchor="middle">V4</text><text x="423" y="574" text-anchor="middle">V5</text><text x="487" y="574" text-anchor="middle">V6</text><text x="551" y="574" text-anchor="middle">V7</text><text x="615" y="574" text-anchor="middle">V8</text>
+  </g>
+
+  <!-- Coupons / payout queue -->
+  <rect x="720" y="340" width="376" height="252" rx="16" fill="#140E26" stroke="#FFFFFF" stroke-opacity="0.07"/>
+  <text x="742" y="374" font-family="'Segoe UI',sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">Payout Queue</text>
+  <g>
+    <rect x="742" y="392" width="332" height="44" rx="10" fill="#FFFFFF" opacity="0.04"/>
+    <circle cx="766" cy="414" r="11" fill="#F472B6" opacity="0.4"/>
+    <rect x="788" y="406" width="120" height="8" rx="4" fill="#FFFFFF" opacity="0.55"/>
+    <rect x="788" y="420" width="72" height="7" rx="3.5" fill="#FFFFFF" opacity="0.22"/>
+    <text x="1058" y="418" font-family="'Segoe UI',sans-serif" font-size="12" font-weight="600" fill="#86EFAC" text-anchor="end">₹18,400</text>
+
+    <rect x="742" y="444" width="332" height="44" rx="10" fill="#FFFFFF" opacity="0.04"/>
+    <circle cx="766" cy="466" r="11" fill="#A78BFA" opacity="0.4"/>
+    <rect x="788" y="458" width="98" height="8" rx="4" fill="#FFFFFF" opacity="0.55"/>
+    <rect x="788" y="472" width="86" height="7" rx="3.5" fill="#FFFFFF" opacity="0.22"/>
+    <text x="1058" y="470" font-family="'Segoe UI',sans-serif" font-size="12" font-weight="600" fill="#86EFAC" text-anchor="end">₹9,250</text>
+
+    <rect x="742" y="496" width="332" height="44" rx="10" fill="#FFFFFF" opacity="0.04"/>
+    <circle cx="766" cy="518" r="11" fill="#22C55E" opacity="0.4"/>
+    <rect x="788" y="510" width="134" height="8" rx="4" fill="#FFFFFF" opacity="0.55"/>
+    <rect x="788" y="524" width="64" height="7" rx="3.5" fill="#FFFFFF" opacity="0.22"/>
+    <text x="1058" y="522" font-family="'Segoe UI',sans-serif" font-size="12" font-weight="600" fill="#86EFAC" text-anchor="end">₹24,780</text>
+  </g>
+  <rect x="742" y="552" width="332" height="26" rx="13" fill="#F472B6" opacity="0.16"/>
+  <text x="908" y="569" font-family="'Segoe UI',sans-serif" font-size="11" fill="#FBCFE8" text-anchor="middle">Razorpay · automated split settlement</text>
+
+  <!-- Footer strip -->
+  <rect x="104" y="614" width="992" height="44" rx="14" fill="#140E26" stroke="#FFFFFF" stroke-opacity="0.07"/>
+  <g font-family="'Segoe UI',sans-serif" font-size="12" fill="#94A3B8">
+    <text x="128" y="641">Next.js</text><text x="200" y="641">Express</text><text x="272" y="641">MongoDB</text><text x="358" y="641">Mongoose</text><text x="450" y="641">JWT + OTP</text><text x="540" y="641">Razorpay</text><text x="622" y="641">Sharp</text>
+  </g>
+  <text x="1072" y="641" font-family="'Segoe UI',sans-serif" font-size="12" fill="#86EFAC" text-anchor="end">● Live</text>
+</svg>
