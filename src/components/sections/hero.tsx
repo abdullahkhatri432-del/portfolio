@@ -347,12 +347,12 @@ export function Hero() {
               >
                 <div className="flex items-center gap-3 rounded-2xl border border-white/12 bg-[#0a0f24]/85 px-4 py-3 shadow-2xl backdrop-blur-xl">
                   <span className="font-display text-gradient-brand text-3xl font-bold">
-                    {siteConfig.yearsOfExperience}+
+                    {siteConfig.projectsShipped}
                   </span>
                   <span className="text-muted text-[11px] leading-tight">
-                    Years of
+                    Projects
                     <br />
-                    Experience
+                    Shipped
                   </span>
                 </div>
               </motion.div>

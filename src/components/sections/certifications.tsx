@@ -12,6 +12,9 @@ import { SpotlightCard } from "@/components/ui/spotlight-card";
 import { TiltCard } from "@/components/ui/tilt-card";
 
 export function Certifications() {
+  // Hide the section until at least one real credential is listed.
+  if (CERTIFICATIONS.length === 0) return null;
+
   return (
     <Section id="certifications">
       <SectionHeading

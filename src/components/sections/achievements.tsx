@@ -10,6 +10,11 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { SpotlightCard } from "@/components/ui/spotlight-card";
 
 export function Achievements() {
+  // Hide the section if both the counters and the badge grid are empty.
+  if (ACHIEVEMENT_COUNTERS.length === 0 && ACHIEVEMENTS.length === 0) {
+    return null;
+  }
+
   return (
     <Section id="achievements">
       <SectionHeading

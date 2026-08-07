@@ -13,23 +13,32 @@ import {
 
 import type { EducationItem, FunFact, Stat, TimelineItem } from "@/types";
 
+/**
+ * Keep this bio honest about your stage. "Building toward" reads far better
+ * to an experienced engineer than an inflated claim they can disprove in one
+ * click, and it sets up interviews you can actually win.
+ */
 export const BIO_PARAGRAPHS: string[] = [
-  "I'm Abdullah Khatri, a Full Stack Developer from Gujarat, India. I design and engineer web products end to end — from database schemas and typed API layers to pixel-precise interfaces that feel effortless to use.",
-  "My work sits at the intersection of performance and craft. I care deeply about sub-second load times, accessible markup, and interfaces that hold up under real traffic — but equally about the micro-interactions that make a product memorable.",
-  "Most of my time is spent in the Next.js, TypeScript, PostgreSQL and Prisma ecosystem, shipping production platforms like ShopSphere and GameVault Pro. I'm currently open to freelance work, internships and full-time roles where I can build things people genuinely enjoy using.",
+  "I'm Abdullah Khatri, a Full Stack Developer from Gujarat, India, currently studying Computer Science and building web applications end to end — from database schemas and API layers through to the interface.",
+  "I learn by shipping complete systems rather than tutorials. That has meant working through the parts most side projects skip: role-based authentication, payment integration with signature verification, commission splitting across vendors, GST-compliant invoicing, and normalising a database properly instead of bolting tables together.",
+  "Most of my work sits in the React, Next.js, Express and SQL ecosystem. I'm actively looking for internships, entry-level roles and freelance work where I can learn from people more experienced than me and contribute real code.",
 ];
 
+/**
+ * Keep every figure below verifiable. Anyone can open your GitHub profile,
+ * so these should track reality rather than ambition.
+ */
 export const ABOUT_STATS: Stat[] = [
-  { label: "Years Building", value: 3, suffix: "+" },
-  { label: "Projects Shipped", value: 25, suffix: "+" },
-  { label: "Technologies", value: 30, suffix: "+" },
-  { label: "Commits Pushed", value: 2400, suffix: "+" },
+  { label: "Projects Shipped", value: 5, suffix: "" },
+  { label: "Full Stack Apps", value: 4, suffix: "" },
+  { label: "Technologies Used", value: 20, suffix: "+" },
+  { label: "Database Tables Modelled", value: 14, suffix: "" },
 ];
 
 export const HERO_STATS: Stat[] = [
-  { label: "Years of Experience", value: 3, suffix: "+" },
-  { label: "Projects Delivered", value: 25, suffix: "+" },
-  { label: "Client Satisfaction", value: 100, suffix: "%" },
+  { label: "Projects Shipped", value: 5, suffix: "" },
+  { label: "Full Stack Apps", value: 4, suffix: "" },
+  { label: "Technologies Used", value: 20, suffix: "+" },
 ];
 
 export const JOURNEY: TimelineItem[] = [
@@ -97,13 +106,18 @@ export const JOURNEY: TimelineItem[] = [
   },
 ];
 
+/**
+ * TODO: replace the institution names, periods and scores below with your
+ * real academic details. These are placeholders — an incorrect CGPA is easy
+ * for an employer to catch during verification.
+ */
 export const EDUCATION: EducationItem[] = [
   {
     id: "edu-btech",
     degree: "B.Tech — Computer Science & Engineering",
-    institution: "Gujarat Technological University",
+    institution: "Your University Name",
     period: "2022 — 2026",
-    score: "Current CGPA 8.6 / 10",
+    score: "Add your CGPA",
     focus: [
       "Data Structures & Algorithms",
       "Database Management Systems",
@@ -115,9 +129,9 @@ export const EDUCATION: EducationItem[] = [
   {
     id: "edu-hsc",
     degree: "Higher Secondary — Science (PCM)",
-    institution: "Gujarat Board",
+    institution: "Your School Name",
     period: "2020 — 2022",
-    score: "88.4%",
+    score: "Add your percentage",
     focus: ["Mathematics", "Physics", "Computer Fundamentals"],
   },
 ];
@@ -151,27 +165,27 @@ export const HIGHLIGHTS: {
   icon: typeof Trophy;
 }[] = [
   {
-    title: "Performance First",
+    title: "Ship Complete Systems",
     description:
-      "Lighthouse 95+ across performance, accessibility, best practices and SEO on every project I ship.",
+      "Every project goes the whole distance — auth, payments, admin surfaces and deployment, not just the happy-path UI.",
     icon: Rocket,
   },
   {
-    title: "Type Safe End to End",
+    title: "Type Safe Where It Counts",
     description:
-      "Strict TypeScript from the database schema through the API layer to every React component prop.",
+      "TypeScript across the frontend, with validated API boundaries and schemas that make invalid states hard to represent.",
     icon: Target,
   },
   {
-    title: "Academic Consistency",
+    title: "Study Alongside Building",
     description:
-      "Maintaining an 8.6 CGPA while shipping production applications and freelance client work.",
+      "Balancing a Computer Science degree with self-directed project work, applying coursework like DBMS directly to real builds.",
     icon: GraduationCap,
   },
   {
-    title: "Delivery Record",
+    title: "Learn the Unglamorous Parts",
     description:
-      "25+ projects delivered on schedule with zero critical production incidents to date.",
+      "Commission splits, GST invoicing, webhook verification, rate limiting — the details that separate a demo from a product.",
     icon: Trophy,
   },
 ];

@@ -1,69 +1,36 @@
 import type { Certification } from "@/types";
 
-export const CERTIFICATIONS: Certification[] = [
-  {
-    id: "cert-fullstack",
-    title: "Full Stack Web Development",
-    issuer: "Meta · Coursera",
-    date: "2024",
-    credentialId: "MET-FSWD-2024-8412",
-    skills: ["React", "Node.js", "REST APIs", "Databases"],
-    url: "https://coursera.org/verify/professional-cert",
-    accent: "#7C3AED",
-  },
-  {
-    id: "cert-js-algorithms",
-    title: "JavaScript Algorithms & Data Structures",
-    issuer: "freeCodeCamp",
-    date: "2023",
-    credentialId: "FCC-JSADS-2023-1177",
-    skills: ["Algorithms", "Data Structures", "ES6", "Functional Programming"],
-    url: "https://freecodecamp.org/certification",
-    accent: "#22C55E",
-  },
-  {
-    id: "cert-database",
-    title: "Relational Database Design",
-    issuer: "Oracle Academy",
-    date: "2024",
-    credentialId: "ORA-RDBD-2024-2039",
-    skills: ["SQL", "Normalisation", "ER Modelling", "Indexing"],
-    url: "https://academy.oracle.com",
-    accent: "#06B6D4",
-  },
-  {
-    id: "cert-cloud",
-    title: "Cloud Fundamentals",
-    issuer: "AWS Training",
-    date: "2024",
-    credentialId: "AWS-CF-2024-5560",
-    skills: ["EC2", "S3", "IAM", "Cloud Architecture"],
-    url: "https://aws.amazon.com/training",
-    accent: "#F59E0B",
-  },
-  {
-    id: "cert-typescript",
-    title: "Advanced TypeScript",
-    issuer: "Frontend Masters",
-    date: "2025",
-    credentialId: "FEM-TS-2025-3308",
-    skills: [
-      "Generics",
-      "Type Inference",
-      "Utility Types",
-      "Declaration Files",
-    ],
-    url: "https://frontendmasters.com",
-    accent: "#38BDF8",
-  },
-  {
-    id: "cert-uiux",
-    title: "UI/UX Design Foundations",
-    issuer: "Google · Coursera",
-    date: "2023",
-    credentialId: "GOO-UXD-2023-9021",
-    skills: ["Design Systems", "Prototyping", "Accessibility", "Figma"],
-    url: "https://coursera.org/verify/professional-cert",
-    accent: "#F472B6",
-  },
-];
+/**
+ * Professional certifications.
+ *
+ * IMPORTANT: only list credentials you actually hold. `credentialId` and
+ * `url` are shown publicly and are the first things a recruiter checks — an
+ * invalid ID is far more damaging than an empty section.
+ *
+ * The Certifications section automatically hides itself while this array is
+ * empty.
+ *
+ * To add one, copy this shape:
+ *
+ * {
+ *   id: "cert-something",
+ *   title: "Certificate Name Exactly As Issued",
+ *   issuer: "Issuing Organisation",
+ *   date: "2026",
+ *   credentialId: "THE-REAL-ID-FROM-YOUR-CERTIFICATE",
+ *   skills: ["Skill One", "Skill Two"],
+ *   url: "https://verification-link-from-the-issuer",
+ *   accent: "#7C3AED",
+ * }
+ *
+ * Free, genuinely respected options worth earning:
+ *  - freeCodeCamp — Responsive Web Design, JavaScript Algorithms & DS
+ *  - Google/Coursera — UX Design, Data Analytics (audit free)
+ *  - Microsoft Learn — Azure Fundamentals (AZ-900) learning paths
+ *  - Postman — API Fundamentals Student Expert
+ *  - HackerRank — SQL (Basic/Intermediate/Advanced), Problem Solving
+ *
+ * HackerRank SQL is the quickest genuine win here: it takes an afternoon,
+ * it is verifiable, and it directly backs up your DBMS project.
+ */
+export const CERTIFICATIONS: Certification[] = [];

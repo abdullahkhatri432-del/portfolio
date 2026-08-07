@@ -91,7 +91,7 @@ export const PROJECTS: Project[] = [
     image: "/projects/gamevault-pro.svg",
     links: {
       github: `${siteConfig.links.github}/gamevault-pro`,
-      demo: "https://gamevault-pro-demo.vercel.app",
+      // No live demo yet — deploy the repo to Vercel and add the URL here.
     },
   },
   {

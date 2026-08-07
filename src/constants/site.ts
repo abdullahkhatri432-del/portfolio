@@ -30,7 +30,11 @@ export const siteConfig = {
   location: "Gujarat, India",
   timezone: "IST (UTC+5:30)",
   availability: "Available for new projects",
-  yearsOfExperience: 3,
+  /**
+   * Number of full stack applications shipped. Shown as a badge on the hero
+   * portrait. Bump this as you ship more — keep it honest and verifiable.
+   */
+  projectsShipped: 5,
   url: env("NEXT_PUBLIC_SITE_URL", "https://abdullahkhatri.vercel.app"),
   ogImage: "/opengraph-image",
   keywords: [

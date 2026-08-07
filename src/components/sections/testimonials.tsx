@@ -25,6 +25,7 @@ export function Testimonials() {
 
   const paginate = React.useCallback(
     (delta: number) => {
+      if (count === 0) return;
       setState(([current]) => [(current + delta + count) % count, delta]);
     },
     [count],
@@ -36,16 +37,19 @@ export function Testimonials() {
 
   // Autoplay
   React.useEffect(() => {
-    if (paused || reduced) return;
+    if (paused || reduced || count === 0) return;
     const timer = window.setInterval(() => paginate(1), AUTOPLAY_MS);
     return () => window.clearInterval(timer);
-  }, [paused, reduced, paginate]);
+  }, [paused, reduced, count, paginate]);
 
   // Keyboard navigation
   const onKeyDown = (event: React.KeyboardEvent) => {
     if (event.key === "ArrowLeft") paginate(-1);
     if (event.key === "ArrowRight") paginate(1);
   };
+
+  // Hide the whole section until there is at least one real testimonial.
+  if (!active) return null;
 
   return (
     <Section id="testimonials">

@@ -1,96 +1,60 @@
-import {
-  Award,
-  Code2,
-  GitBranch,
-  Medal,
-  Star,
-  Trophy,
-  Users,
-  Zap,
-} from "lucide-react";
+import { Code2, Database, Layers, Trophy } from "lucide-react";
 
 import type { Achievement, Stat } from "@/types";
 
+/**
+ * Achievements and milestones.
+ *
+ * IMPORTANT: keep every number here defensible. A recruiter can open your
+ * GitHub profile in one click, so inflated counters are actively harmful.
+ * Update these as they become true rather than aspiring upward.
+ *
+ * Both the counters and the badge grid hide themselves when empty.
+ */
+
+/** Headline counters. Verify each against your real GitHub/project history. */
 export const ACHIEVEMENT_COUNTERS: Stat[] = [
-  { label: "Projects Completed", value: 25, suffix: "+" },
-  { label: "GitHub Contributions", value: 2400, suffix: "+" },
-  { label: "Students Mentored", value: 40, suffix: "+" },
-  { label: "Technologies Mastered", value: 30, suffix: "+" },
-  { label: "Client Satisfaction", value: 100, suffix: "%" },
-  { label: "Avg Lighthouse Score", value: 96, suffix: "/100" },
+  { label: "Projects Shipped", value: 5, suffix: "" },
+  { label: "Full Stack Applications", value: 4, suffix: "" },
+  { label: "Technologies Used", value: 20, suffix: "+" },
 ];
 
+/** Notable milestones. Only include things that actually happened. */
 export const ACHIEVEMENTS: Achievement[] = [
   {
-    id: "ach-hackathon",
-    title: "Hackathon Finalist",
+    id: "ach-fullstack-shipped",
+    title: "Four Full Stack Apps Shipped",
     description:
-      "Reached the final round of an inter-college hackathon with a full stack solution built and deployed in 36 hours.",
-    date: "2024",
-    icon: Trophy,
-    accent: "#F59E0B",
-  },
-  {
-    id: "ach-dsa",
-    title: "500+ DSA Problems Solved",
-    description:
-      "Consistent problem solving across arrays, graphs, dynamic programming and system design fundamentals.",
-    date: "2023 — Present",
-    icon: Code2,
+      "Built and deployed ShopSphere, GameVault Pro, a multi-vendor marketplace and ShopVerse — each with authentication, payments and an admin surface.",
+    date: "2026",
+    icon: Layers,
     accent: "#7C3AED",
   },
   {
-    id: "ach-streak",
-    title: "365-Day Commit Streak",
+    id: "ach-multi-role",
+    title: "Four-Role Platform Architecture",
     description:
-      "A full year of daily contributions across personal projects, client work and open source repositories.",
-    date: "2024",
-    icon: GitBranch,
-    accent: "#22C55E",
-  },
-  {
-    id: "ach-mentor",
-    title: "Mentored 40+ Developers",
-    description:
-      "Guided junior students from their first component to a deployed full stack application.",
-    date: "2023 — 2024",
-    icon: Users,
-    accent: "#06B6D4",
-  },
-  {
-    id: "ach-performance",
-    title: "Perfect Lighthouse Run",
-    description:
-      "Achieved a 100 score across performance, accessibility, best practices and SEO on a production deployment.",
-    date: "2025",
-    icon: Zap,
-    accent: "#38BDF8",
-  },
-  {
-    id: "ach-academic",
-    title: "Academic Excellence Award",
-    description:
-      "Recognised for maintaining top-decile academic performance alongside active project delivery.",
-    date: "2024",
-    icon: Medal,
+      "Designed a marketplace with separate vendor, wholesaler, admin and customer dashboards, including automated commission splits and payout settlement.",
+    date: "2026",
+    icon: Trophy,
     accent: "#F472B6",
   },
   {
-    id: "ach-review",
-    title: "Top Rated Freelancer",
+    id: "ach-dbms",
+    title: "Database Normalised to 3NF",
     description:
-      "Maintained a 5-star average across every completed freelance engagement.",
-    date: "2025",
-    icon: Star,
-    accent: "#FACC15",
+      "Modelled a university management schema across 14 tables with full referential integrity, stored procedures and triggers, normalised to Third Normal Form.",
+    date: "2024",
+    icon: Database,
+    accent: "#22C55E",
   },
   {
-    id: "ach-community",
-    title: "Community Speaker",
+    id: "ach-payments",
+    title: "Production Payment Integration",
     description:
-      "Delivered six technical workshops on modern web development to a combined audience of 200+ students.",
-    date: "2024",
-    icon: Award,
-    accent: "#A78BFA",
+      "Implemented Razorpay checkout with signature verification, webhook handling and automated marketplace fee splitting across multiple projects.",
+    date: "2026",
+    icon: Code2,
+    accent: "#06B6D4",
   },
 ];

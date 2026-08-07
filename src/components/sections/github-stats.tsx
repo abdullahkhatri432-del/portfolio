@@ -83,10 +83,15 @@ function GitHubWidget({
   );
 }
 
+/**
+ * Static quick facts shown above the live widgets.
+ * The widgets below pull real data from GitHub, so keep these consistent
+ * with your actual profile or a visitor will spot the mismatch instantly.
+ */
 const QUICK_FACTS = [
-  { label: "Public Repositories", value: "40+", icon: GitBranch },
-  { label: "Contributions / Year", value: "2,400+", icon: Star },
-  { label: "Open Source PRs", value: "35+", icon: Users },
+  { label: "Public Repositories", value: "5", icon: GitBranch },
+  { label: "Full Stack Projects", value: "4", icon: Star },
+  { label: "Primary Languages", value: "JS / TS", icon: Users },
 ];
 
 export function GitHubStats() {
