@@ -236,7 +236,8 @@ export const PROJECTS: Project[] = [
     tagline: "Real-Time Delivery Analysis",
     category: "Computer Vision",
     year: "2026",
-    status: "Live",
+    // Switch to "Live" once the Vercel deployment URL is added below.
+    status: "Completed",
     featured: true,
     description:
       "Interview practice with on-device computer vision and voice analysis — head pose, gaze estimation, pitch detection and filler-word tracking, all processed locally in the browser.",
@@ -270,7 +271,8 @@ export const PROJECTS: Project[] = [
     accent: "#8B5CF6",
     image: "/projects/ai-interview-simulator.svg",
     links: {
-      github: `${siteConfig.links.github}/ai-interview-simulator`,
+      github: `${siteConfig.links.github}/ai-interview`,
+      // Add the Vercel URL here once deployed.
     },
   },
   {
