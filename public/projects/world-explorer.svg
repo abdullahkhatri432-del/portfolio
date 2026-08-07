@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-label="World Explorer 3D globe preview">
+  <defs>
+    <radialGradient id="we-space" cx="50%" cy="45%" r="75%">
+      <stop offset="0%" stop-color="#0B1533"/>
+      <stop offset="60%" stop-color="#070C1E"/>
+      <stop offset="100%" stop-color="#03050F"/>
+    </radialGradient>
+    <radialGradient id="we-earth" cx="36%" cy="32%" r="72%">
+      <stop offset="0%" stop-color="#2C7BC4"/>
+      <stop offset="45%" stop-color="#14508F"/>
+      <stop offset="80%" stop-color="#0A2C57"/>
+      <stop offset="100%" stop-color="#05152C"/>
+    </radialGradient>
+    <radialGradient id="we-atmo" cx="50%" cy="50%" r="50%">
+      <stop offset="70%" stop-color="#38BDF8" stop-opacity="0"/>
+      <stop offset="88%" stop-color="#38BDF8" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="we-spark" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0.45"/>
+    </linearGradient>
+    <clipPath id="we-clip"><circle cx="430" cy="380" r="228"/></clipPath>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#we-space)"/>
+
+  <!-- Stars -->
+  <g fill="#FFFFFF">
+    <circle cx="90" cy="90" r="1.4" opacity="0.85"/><circle cx="215" cy="52" r="1" opacity="0.5"/>
+    <circle cx="330" cy="128" r="1.2" opacity="0.7"/><circle cx="62" cy="300" r="1" opacity="0.45"/>
+    <circle cx="150" cy="510" r="1.3" opacity="0.75"/><circle cx="78" cy="650" r="1" opacity="0.5"/>
+    <circle cx="290" cy="690" r="1.2" opacity="0.6"/><circle cx="600" cy="70" r="1.1" opacity="0.55"/>
+    <circle cx="700" cy="700" r="1" opacity="0.45"/><circle cx="470" cy="702" r="1.3" opacity="0.7"/>
+    <circle cx="24" cy="180" r="1" opacity="0.4"/><circle cx="252" cy="248" r="0.9" opacity="0.4"/>
+    <circle cx="392" cy="640" r="1" opacity="0.5"/><circle cx="640" cy="200" r="0.9" opacity="0.35"/>
+  </g>
+
+  <!-- Atmosphere halo -->
+  <circle cx="430" cy="380" r="286" fill="url(#we-atmo)"/>
+
+  <!-- Earth -->
+  <circle cx="430" cy="380" r="228" fill="url(#we-earth)"/>
+
+  <g clip-path="url(#we-clip)">
+    <!-- Landmasses (stylised) -->
+    <g fill="#1F7A4C" opacity="0.92">
+      <path d="M300 232c26-16 62-20 92-10 24 8 40 26 66 28 20 2 38-8 58-4 16 3 26 16 24 30-3 20-26 28-45 32-30 6-60 2-90 8-24 5-44 20-68 22-22 2-42-10-48-30-7-24 2-52 11-76z"/>
+      <path d="M352 396c30-10 62-4 92 6 22 8 42 22 50 44 9 24 2 52-14 72-18 22-48 32-76 28-30-4-54-26-66-52-14-30-14-70 14-98z"/>
+      <path d="M556 300c22-8 46-4 64 10 16 12 24 32 22 52-2 24-18 44-40 52-24 9-52 2-68-16-18-20-20-52-6-76 6-10 16-18 28-22z"/>
+      <path d="M228 470c18-6 38 0 50 14 12 14 14 34 6 50-10 20-32 30-52 26-22-4-38-24-36-46 2-20 14-38 32-44z"/>
+      <path d="M556 486c16-4 32 4 40 18 8 16 4 36-8 48-14 14-38 14-52 0-14-16-12-42 6-56 4-4 9-8 14-10z"/>
+    </g>
+
+    <!-- Graticule -->
+    <g stroke="#7DD3FC" stroke-opacity="0.16" stroke-width="1" fill="none">
+      <ellipse cx="430" cy="380" rx="228" ry="76"/>
+      <ellipse cx="430" cy="380" rx="228" ry="152"/>
+      <ellipse cx="430" cy="380" rx="76" ry="228"/>
+      <ellipse cx="430" cy="380" rx="152" ry="228"/>
+      <line x1="202" y1="380" x2="658" y2="380"/>
+      <line x1="430" y1="152" x2="430" y2="608"/>
+    </g>
+
+    <!-- Terminator shading -->
+    <ellipse cx="560" cy="400" rx="240" ry="250" fill="#03050F" opacity="0.38"/>
+  </g>
+
+  <!-- Rim light -->
+  <circle cx="430" cy="380" r="228" fill="none" stroke="#67E8F9" stroke-opacity="0.4" stroke-width="1.5"/>
+
+  <!-- Country markers -->
+  <g>
+    <circle cx="386" cy="268" r="4" fill="#F8FAFC"/>
+    <circle cx="512" cy="330" r="4" fill="#F8FAFC"/>
+    <circle cx="330" cy="430" r="4" fill="#F8FAFC"/>
+    <circle cx="470" cy="500" r="4" fill="#F8FAFC"/>
+    <circle cx="268" cy="352" r="4" fill="#F8FAFC"/>
+    <circle cx="560" cy="452" r="4" fill="#F8FAFC"/>
+    <circle cx="410" cy="196" r="4" fill="#F8FAFC"/>
+
+    <!-- Selected marker -->
+    <circle cx="452" cy="322" r="16" fill="#22D3EE" opacity="0.18"/>
+    <circle cx="452" cy="322" r="9" fill="#22D3EE" opacity="0.35"/>
+    <circle cx="452" cy="322" r="5" fill="#22D3EE"/>
+    <line x1="452" y1="322" x2="452" y2="252" stroke="#22D3EE" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.85"/>
+    <rect x="392" y="228" width="122" height="24" rx="12" fill="#050816" opacity="0.9" stroke="#22D3EE" stroke-opacity="0.45"/>
+    <text x="453" y="244" font-family="'Segoe UI',sans-serif" font-size="12" fill="#67E8F9" text-anchor="middle">France</text>
+  </g>
+
+  <!-- Header -->
+  <g>
+    <circle cx="52" cy="48" r="9" fill="none" stroke="#22D3EE" stroke-width="1.8"/>
+    <ellipse cx="52" cy="48" rx="4" ry="9" fill="none" stroke="#22D3EE" stroke-width="1.2"/>
+    <line x1="43" y1="48" x2="61" y2="48" stroke="#22D3EE" stroke-width="1.2"/>
+    <text x="72" y="53" font-family="'Segoe UI',sans-serif" font-size="19" font-weight="700" fill="#FFFFFF">World Explorer</text>
+    <text x="72" y="72" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#94A3B8">249 countries · click a marker to explore</text>
+  </g>
+
+  <!-- Search bar -->
+  <rect x="300" y="34" width="240" height="32" rx="16" fill="#050816" opacity="0.8" stroke="#FFFFFF" stroke-opacity="0.14"/>
+  <circle cx="322" cy="50" r="5" fill="none" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="326" y1="54" x2="330" y2="58" stroke="#64748B" stroke-width="1.5"/>
+  <text x="340" y="54" font-family="'Segoe UI',sans-serif" font-size="12" fill="#64748B">Search countries…</text>
+
+  <!-- Region filters -->
+  <g font-family="'Segoe UI',sans-serif" font-size="11">
+    <rect x="40" y="678" width="52" height="26" rx="13" fill="#22D3EE" opacity="0.16" stroke="#22D3EE" stroke-opacity="0.5"/>
+    <text x="66" y="695" fill="#67E8F9" text-anchor="middle">All</text>
+    <rect x="100" y="678" width="60" height="26" rx="13" fill="#050816" opacity="0.7" stroke="#FFFFFF" stroke-opacity="0.1"/>
+    <text x="130" y="695" fill="#94A3B8" text-anchor="middle">Africa</text>
+    <rect x="168" y="678" width="62" height="26" rx="13" fill="#050816" opacity="0.7" stroke="#FFFFFF" stroke-opacity="0.1"/>
+    <text x="199" y="695" fill="#94A3B8" text-anchor="middle">Europe</text>
+    <rect x="238" y="678" width="52" height="26" rx="13" fill="#050816" opacity="0.7" stroke="#FFFFFF" stroke-opacity="0.1"/>
+    <text x="264" y="695" fill="#94A3B8" text-anchor="middle">Asia</text>
+    <rect x="298" y="678" width="80" height="26" rx="13" fill="#050816" opacity="0.7" stroke="#FFFFFF" stroke-opacity="0.1"/>
+    <text x="338" y="695" fill="#94A3B8" text-anchor="middle">Americas</text>
+  </g>
+
+  <!-- Side panel -->
+  <rect x="740" y="0" width="460" height="750" fill="#070B1C" opacity="0.96"/>
+  <line x1="740" y1="0" x2="740" y2="750" stroke="#FFFFFF" stroke-opacity="0.10"/>
+
+  <text x="776" y="56" font-size="24">🇫🇷</text>
+  <text x="812" y="56" font-family="'Segoe UI',sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">France</text>
+  <text x="776" y="78" font-family="'Segoe UI',sans-serif" font-size="11.5" fill="#94A3B8">French Republic</text>
+  <circle cx="1160" cy="48" r="14" fill="none" stroke="#FFFFFF" stroke-opacity="0.15"/>
+  <line x1="1155" y1="43" x2="1165" y2="53" stroke="#94A3B8" stroke-width="1.4"/>
+  <line x1="1165" y1="43" x2="1155" y2="53" stroke="#94A3B8" stroke-width="1.4"/>
+
+  <!-- Tabs -->
+  <g font-family="'Segoe UI',sans-serif" font-size="11.5">
+    <rect x="776" y="98" width="66" height="26" rx="13" fill="#FFFFFF" opacity="0.10"/>
+    <text x="809" y="115" fill="#FFFFFF" text-anchor="middle">Overview</text>
+    <text x="872" y="115" fill="#94A3B8">Economy</text>
+    <text x="944" y="115" fill="#94A3B8">Weather</text>
+    <text x="1010" y="115" fill="#94A3B8">News</text>
+    <text x="1060" y="115" fill="#94A3B8">Travel</text>
+  </g>
+  <line x1="740" y1="142" x2="1200" y2="142" stroke="#FFFFFF" stroke-opacity="0.08"/>
+
+  <!-- GDP card -->
+  <rect x="776" y="164" width="388" height="150" rx="16" fill="#0B1A2E" stroke="#22D3EE" stroke-opacity="0.22"/>
+  <text x="798" y="190" font-family="'Segoe UI',sans-serif" font-size="9.5" letter-spacing="1.5" fill="#67E8F9">GROSS DOMESTIC PRODUCT · 2025</text>
+  <text x="798" y="228" font-family="monospace" font-size="30" font-weight="700" fill="#FFFFFF">$3.37T</text>
+  <text x="798" y="248" font-family="'Segoe UI',sans-serif" font-size="10.5" fill="#64748B">$3,366,315,927,447 USD</text>
+  <!-- Sparkline -->
+  <path d="M798 296 L826 292 L854 286 L882 290 L910 278 L938 268 L966 272 L994 258 L1022 250 L1050 244 L1078 236 L1106 230 L1134 222" fill="none" stroke="#22D3EE" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M798 296 L826 292 L854 286 L882 290 L910 278 L938 268 L966 272 L994 258 L1022 250 L1050 244 L1078 236 L1106 230 L1134 222 L1134 300 L798 300 Z" fill="url(#we-spark)"/>
+  <text x="798" y="312" font-family="monospace" font-size="9" fill="#475569">2012</text>
+  <text x="1134" y="312" font-family="monospace" font-size="9" fill="#475569" text-anchor="end">2025</text>
+
+  <!-- Population + per capita -->
+  <rect x="776" y="328" width="188" height="94" rx="14" fill="#0E1430" stroke="#FFFFFF" stroke-opacity="0.07"/>
+  <text x="796" y="352" font-family="'Segoe UI',sans-serif" font-size="9.5" letter-spacing="1.2" fill="#64748B">POPULATION · 2025</text>
+  <text x="796" y="382" font-family="monospace" font-size="22" font-weight="700" fill="#FFFFFF">68.7M</text>
+  <text x="796" y="402" font-family="'Segoe UI',sans-serif" font-size="9.5" fill="#475569">68,703,208</text>
+
+  <rect x="976" y="328" width="188" height="94" rx="14" fill="#0E1430" stroke="#FFFFFF" stroke-opacity="0.07"/>
+  <text x="996" y="352" font-family="'Segoe UI',sans-serif" font-size="9.5" letter-spacing="1.2" fill="#64748B">GDP PER CAPITA</text>
+  <text x="996" y="382" font-family="monospace" font-size="22" font-weight="700" fill="#FFFFFF">$48,997</text>
+  <text x="996" y="402" font-family="'Segoe UI',sans-serif" font-size="9.5" fill="#475569">GDP ÷ population</text>
+
+  <!-- Weather card -->
+  <rect x="776" y="436" width="388" height="140" rx="16" fill="#0D1C33" stroke="#FFFFFF" stroke-opacity="0.07"/>
+  <text x="798" y="462" font-family="'Segoe UI',sans-serif" font-size="9.5" letter-spacing="1.2" fill="#94A3B8">PARIS · NOW</text>
+  <text x="798" y="512" font-family="monospace" font-size="40" font-weight="700" fill="#FFFFFF">22°</text>
+  <circle cx="900" cy="486" r="15" fill="#FACC15" opacity="0.85"/>
+  <text x="928" y="492" font-family="'Segoe UI',sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Clear sky</text>
+  <text x="928" y="510" font-family="'Segoe UI',sans-serif" font-size="10.5" fill="#94A3B8">Feels like 21°C</text>
+  <g font-family="'Segoe UI',sans-serif" font-size="9.5" fill="#64748B">
+    <text x="798" y="542">HUMIDITY</text><text x="798" y="560" font-family="monospace" font-size="12" fill="#FFFFFF">64%</text>
+    <text x="898" y="542">WIND</text><text x="898" y="560" font-family="monospace" font-size="12" fill="#FFFFFF">11 km/h</text>
+    <text x="998" y="542">TIMEZONE</text><text x="998" y="560" font-family="monospace" font-size="11" fill="#FFFFFF">Europe/Paris</text>
+  </g>
+
+  <!-- Forecast -->
+  <g>
+    <rect x="776" y="590" width="90" height="66" rx="12" fill="#0E1430" stroke="#FFFFFF" stroke-opacity="0.07"/>
+    <text x="821" y="612" font-family="'Segoe UI',sans-serif" font-size="10" fill="#94A3B8" text-anchor="middle">Mon</text>
+    <text x="821" y="634" font-family="monospace" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">24°</text>
+    <text x="821" y="650" font-family="monospace" font-size="10" fill="#475569" text-anchor="middle">14°</text>
+
+    <rect x="874" y="590" width="90" height="66" rx="12" fill="#0E1430" stroke="#FFFFFF" stroke-opacity="0.07"/>
+    <text x="919" y="612" font-family="'Segoe UI',sans-serif" font-size="10" fill="#94A3B8" text-anchor="middle">Tue</text>
+    <text x="919" y="634" font-family="monospace" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">26°</text>
+    <text x="919" y="650" font-family="monospace" font-size="10" fill="#475569" text-anchor="middle">15°</text>
+
+    <rect x="972" y="590" width="90" height="66" rx="12" fill="#0E1430" stroke="#FFFFFF" stroke-opacity="0.07"/>
+    <text x="1017" y="612" font-family="'Segoe UI',sans-serif" font-size="10" fill="#94A3B8" text-anchor="middle">Wed</text>
+    <text x="1017" y="634" font-family="monospace" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">23°</text>
+    <text x="1017" y="650" font-family="monospace" font-size="10" fill="#475569" text-anchor="middle">13°</text>
+
+    <rect x="1070" y="590" width="94" height="66" rx="12" fill="#0E1430" stroke="#FFFFFF" stroke-opacity="0.07"/>
+    <text x="1117" y="612" font-family="'Segoe UI',sans-serif" font-size="10" fill="#94A3B8" text-anchor="middle">Thu</text>
+    <text x="1117" y="634" font-family="monospace" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">21°</text>
+    <text x="1117" y="650" font-family="monospace" font-size="10" fill="#475569" text-anchor="middle">12°</text>
+  </g>
+
+  <text x="776" y="690" font-family="'Segoe UI',sans-serif" font-size="9.5" fill="#475569">Source: World Bank Open Data · Open-Meteo</text>
+  <rect x="776" y="704" width="388" height="1" fill="#FFFFFF" opacity="0.07"/>
+  <text x="776" y="726" font-family="'Segoe UI',sans-serif" font-size="9.5" fill="#22C55E">● Live data · no API key required</text>
+</svg>
