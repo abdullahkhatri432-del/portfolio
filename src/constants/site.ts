@@ -46,9 +46,9 @@ export const siteConfig = {
     "Tailwind CSS",
   ],
   contact: {
-    email: env("NEXT_PUBLIC_CONTACT_EMAIL", "hello@abdullahkhatri.dev"),
-    phone: env("NEXT_PUBLIC_CONTACT_PHONE", "+91 00000 00000"),
-    phoneHref: env("NEXT_PUBLIC_CONTACT_PHONE_HREF", "+910000000000"),
+    email: env("NEXT_PUBLIC_CONTACT_EMAIL", "abdullahkhatri432@gmail.com"),
+    phone: env("NEXT_PUBLIC_CONTACT_PHONE", "+91 81605 87811"),
+    phoneHref: env("NEXT_PUBLIC_CONTACT_PHONE_HREF", "+918160587811"),
   },
   links: {
     github: env(
