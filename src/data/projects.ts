@@ -233,8 +233,7 @@ export const PROJECTS: Project[] = [
     tagline: "Real-Time Delivery Analysis",
     category: "Computer Vision",
     year: "2026",
-    // Switch to "Live" once the Vercel deployment URL is added below.
-    status: "Completed",
+    status: "Live",
     featured: true,
     description:
       "Interview practice with on-device computer vision and voice analysis — head pose, gaze estimation, pitch detection and filler-word tracking, all processed locally in the browser.",
@@ -269,7 +268,7 @@ export const PROJECTS: Project[] = [
     image: "/projects/ai-interview-simulator.svg",
     links: {
       github: `${siteConfig.links.github}/ai-interview`,
-      // Add the Vercel URL here once deployed.
+      demo: "https://ai-interview-five-theta.vercel.app",
     },
   },
   {
@@ -324,7 +323,7 @@ export const PROJECTS: Project[] = [
     tagline: "Clinical Decision Support System",
     category: "Enterprise / Healthcare",
     year: "2026",
-    status: "Completed",
+    status: "Live",
     featured: true,
     description:
       "An eight-module hospital management system with a working clinical decision support layer — NEWS2 early-warning scoring and a live prescription safety engine checking allergies, interactions and duplication.",
@@ -357,6 +356,7 @@ export const PROJECTS: Project[] = [
     image: "/projects/hospital-erp.svg",
     links: {
       github: `${siteConfig.links.github}/hospital-erp`,
+      demo: "https://hospital-erp-roan.vercel.app",
     },
   },
   {
