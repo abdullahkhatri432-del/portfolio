@@ -1,17 +1,43 @@
 {
-  "name": "portfolio",
-  "version": "0.1.0",
+  "name": "abdullah-khatri-portfolio",
+  "version": "1.0.0",
   "private": true,
+  "description": "Premium personal portfolio of Abdullah Khatri — Full Stack Developer.",
+  "author": "Abdullah Khatri",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,css}\"",
+    "icons": "node scripts/generate-favicon.mjs",
+    "verify": "npm run typecheck && npm run lint && npm run build"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.7.1",
+    "@radix-ui/react-slot": "^1.3.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "gsap": "^3.15.0",
+    "lenis": "^1.3.26",
+    "lucide-react": "^1.30.0",
+    "motion": "^13.0.0",
     "next": "16.3.0",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "react-hook-form": "^7.84.0",
+    "react-icons": "^5.7.0",
+    "resend": "^6.18.1",
+    "sonner": "^2.0.7",
+    "tailwind-merge": "^3.6.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -20,6 +46,8 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.0",
+    "prettier": "^3.9.6",
+    "prettier-plugin-tailwindcss": "^0.8.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

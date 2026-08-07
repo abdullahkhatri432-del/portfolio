@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" role="img" aria-label="Abdullah Khatri portrait placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F1631"/>
+      <stop offset="50%" stop-color="#0A0F24"/>
+      <stop offset="100%" stop-color="#050816"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="55%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#22C55E"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.55"/>
+      <stop offset="60%" stop-color="#06B6D4" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#050816" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#94A3B8" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="600" height="600" fill="url(#bg)"/>
+  <rect width="600" height="600" fill="url(#grid)"/>
+  <circle cx="300" cy="280" r="260" fill="url(#halo)"/>
+
+  <!-- Shoulders -->
+  <path d="M110 600c0-104 85-172 190-172s190 68 190 172z" fill="url(#brand)" opacity="0.28"/>
+  <path d="M130 600c0-92 76-152 170-152s170 60 170 152z" fill="#0F1631" opacity="0.75"/>
+
+  <!-- Head -->
+  <circle cx="300" cy="256" r="112" fill="url(#brand)" opacity="0.22" filter="url(#soft)"/>
+  <circle cx="300" cy="256" r="104" fill="#141C3A"/>
+  <circle cx="300" cy="256" r="104" fill="none" stroke="url(#brand)" stroke-width="2.5" stroke-opacity="0.85"/>
+
+  <!-- Monogram -->
+  <text x="300" y="292" font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif" font-size="92" font-weight="700" fill="url(#brand)" text-anchor="middle" letter-spacing="2">AK</text>
+
+  <!-- Orbit accents -->
+  <circle cx="300" cy="256" r="150" fill="none" stroke="#94A3B8" stroke-opacity="0.14" stroke-width="1" stroke-dasharray="5 9"/>
+  <circle cx="300" cy="106" r="6" fill="#7C3AED"/>
+  <circle cx="450" cy="256" r="5" fill="#06B6D4"/>
+  <circle cx="300" cy="406" r="5" fill="#22C55E"/>
+</svg>

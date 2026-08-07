@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-label="Next project placeholder">
+  <defs>
+    <linearGradient id="cs-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0D1225"/>
+      <stop offset="55%" stop-color="#0A0F24"/>
+      <stop offset="100%" stop-color="#050816"/>
+    </linearGradient>
+    <linearGradient id="cs-brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="50%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#22C55E"/>
+    </linearGradient>
+    <radialGradient id="cs-glow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="cs-grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#94A3B8" stroke-opacity="0.055" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#cs-bg)"/>
+  <rect width="1200" height="750" fill="url(#cs-grid)"/>
+  <rect width="1200" height="750" fill="url(#cs-glow)"/>
+
+  <!-- Dashed frame -->
+  <rect x="140" y="120" width="920" height="510" rx="28" fill="none" stroke="#94A3B8" stroke-opacity="0.22" stroke-width="2" stroke-dasharray="12 12"/>
+
+  <!-- Plus emblem -->
+  <circle cx="600" cy="300" r="76" fill="#0E1430" stroke="url(#cs-brand)" stroke-width="2" stroke-opacity="0.7"/>
+  <path d="M600 262 V338 M562 300 H638" stroke="url(#cs-brand)" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="600" cy="300" r="104" fill="none" stroke="#94A3B8" stroke-opacity="0.12" stroke-dasharray="4 10"/>
+
+  <text x="600" y="430" font-family="'Segoe UI',sans-serif" font-size="40" font-weight="700" fill="#FFFFFF" text-anchor="middle">Your Project Here</text>
+  <text x="600" y="470" font-family="'Segoe UI',sans-serif" font-size="17" fill="#94A3B8" text-anchor="middle">Space reserved for the next build — currently open for collaboration.</text>
+
+  <g>
+    <rect x="418" y="510" width="120" height="36" rx="18" fill="#FFFFFF" opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.1"/>
+    <text x="478" y="533" font-family="'Segoe UI',sans-serif" font-size="13" fill="#CBD5E1" text-anchor="middle">Next.js</text>
+    <rect x="550" y="510" width="130" height="36" rx="18" fill="#FFFFFF" opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.1"/>
+    <text x="615" y="533" font-family="'Segoe UI',sans-serif" font-size="13" fill="#CBD5E1" text-anchor="middle">TypeScript</text>
+    <rect x="692" y="510" width="110" height="36" rx="18" fill="#FFFFFF" opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.1"/>
+    <text x="747" y="533" font-family="'Segoe UI',sans-serif" font-size="13" fill="#CBD5E1" text-anchor="middle">AI SDK</text>
+  </g>
+</svg>

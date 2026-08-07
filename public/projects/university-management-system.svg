@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-label="University Management System ER diagram preview">
+  <defs>
+    <linearGradient id="ums-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06281D"/>
+      <stop offset="55%" stop-color="#0A0F24"/>
+      <stop offset="100%" stop-color="#050816"/>
+    </linearGradient>
+    <linearGradient id="ums-brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22C55E"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <radialGradient id="ums-glow" cx="50%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#22C55E" stop-opacity="0.34"/>
+      <stop offset="100%" stop-color="#22C55E" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="ums-grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#94A3B8" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+    <marker id="ums-arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0 0 L9 4.5 L0 9 z" fill="#22C55E" opacity="0.65"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#ums-bg)"/>
+  <rect width="1200" height="750" fill="url(#ums-grid)"/>
+  <rect width="1200" height="750" fill="url(#ums-glow)"/>
+
+  <!-- Header -->
+  <rect x="80" y="60" width="1040" height="72" rx="18" fill="#0B1024" stroke="#FFFFFF" stroke-opacity="0.10"/>
+  <rect x="104" y="80" width="36" height="32" rx="9" fill="url(#ums-brand)"/>
+  <text x="156" y="95" font-family="'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#FFFFFF">University Management System</text>
+  <text x="156" y="116" font-family="'Segoe UI',sans-serif" font-size="12" fill="#64748B">Entity Relationship Diagram · Normalised to Third Normal Form</text>
+  <rect x="936" y="82" width="72" height="26" rx="13" fill="#22C55E" opacity="0.18"/>
+  <text x="972" y="99" font-family="'Segoe UI',sans-serif" font-size="11" fill="#86EFAC" text-anchor="middle">3NF</text>
+  <rect x="1016" y="82" width="80" height="26" rx="13" fill="#06B6D4" opacity="0.18"/>
+  <text x="1056" y="99" font-family="'Segoe UI',sans-serif" font-size="11" fill="#67E8F9" text-anchor="middle">14 Tables</text>
+
+  <!-- Relationship lines -->
+  <g stroke="#22C55E" stroke-opacity="0.4" stroke-width="1.6" fill="none" marker-end="url(#ums-arrow)">
+    <path d="M320 258 L440 258"/>
+    <path d="M320 452 L440 452"/>
+    <path d="M760 258 L880 258"/>
+    <path d="M760 452 L880 452"/>
+    <path d="M600 336 L600 396"/>
+  </g>
+  <g font-family="monospace" font-size="10" fill="#64748B">
+    <text x="352" y="250">1 : N</text><text x="352" y="444">1 : N</text><text x="792" y="250">N : 1</text><text x="792" y="444">1 : N</text><text x="610" y="372">1 : N</text>
+  </g>
+
+  <!-- Entity: DEPARTMENT -->
+  <g>
+    <rect x="112" y="196" width="208" height="126" rx="12" fill="#0E1430" stroke="#22C55E" stroke-opacity="0.35"/>
+    <rect x="112" y="196" width="208" height="30" rx="12" fill="#22C55E" opacity="0.18"/>
+    <rect x="112" y="214" width="208" height="12" fill="#22C55E" opacity="0.18"/>
+    <text x="128" y="216" font-family="monospace" font-size="12" font-weight="700" fill="#86EFAC">DEPARTMENT</text>
+    <g font-family="monospace" font-size="10.5" fill="#94A3B8">
+      <text x="128" y="248"><tspan fill="#FACC15">PK</tspan>  dept_id</text>
+      <text x="128" y="268">    dept_name</text>
+      <text x="128" y="288">    hod_name</text>
+      <text x="128" y="308">    established</text>
+    </g>
+  </g>
+
+  <!-- Entity: STUDENT -->
+  <g>
+    <rect x="440" y="176" width="320" height="160" rx="12" fill="#0E1430" stroke="#06B6D4" stroke-opacity="0.4"/>
+    <rect x="440" y="176" width="320" height="30" rx="12" fill="#06B6D4" opacity="0.18"/>
+    <rect x="440" y="194" width="320" height="12" fill="#06B6D4" opacity="0.18"/>
+    <text x="456" y="196" font-family="monospace" font-size="12" font-weight="700" fill="#67E8F9">STUDENT</text>
+    <g font-family="monospace" font-size="10.5" fill="#94A3B8">
+      <text x="456" y="228"><tspan fill="#FACC15">PK</tspan>  student_id</text>
+      <text x="456" y="248"><tspan fill="#F472B6">FK</tspan>  dept_id → DEPARTMENT</text>
+      <text x="456" y="268">    full_name, email, phone</text>
+      <text x="456" y="288">    enrolment_year, semester</text>
+      <text x="456" y="308">    date_of_birth, address</text>
+      <text x="456" y="328">    status (ACTIVE | ALUMNI)</text>
+    </g>
+  </g>
+
+  <!-- Entity: FACULTY -->
+  <g>
+    <rect x="880" y="196" width="208" height="126" rx="12" fill="#0E1430" stroke="#A78BFA" stroke-opacity="0.35"/>
+    <rect x="880" y="196" width="208" height="30" rx="12" fill="#A78BFA" opacity="0.18"/>
+    <rect x="880" y="214" width="208" height="12" fill="#A78BFA" opacity="0.18"/>
+    <text x="896" y="216" font-family="monospace" font-size="12" font-weight="700" fill="#C4B5FD">FACULTY</text>
+    <g font-family="monospace" font-size="10.5" fill="#94A3B8">
+      <text x="896" y="248"><tspan fill="#FACC15">PK</tspan>  faculty_id</text>
+      <text x="896" y="268"><tspan fill="#F472B6">FK</tspan>  dept_id</text>
+      <text x="896" y="288">    name, designation</text>
+      <text x="896" y="308">    email, workload</text>
+    </g>
+  </g>
+
+  <!-- Entity: ENROLMENT -->
+  <g>
+    <rect x="440" y="396" width="320" height="150" rx="12" fill="#0E1430" stroke="#22C55E" stroke-opacity="0.45"/>
+    <rect x="440" y="396" width="320" height="30" rx="12" fill="#22C55E" opacity="0.2"/>
+    <rect x="440" y="414" width="320" height="12" fill="#22C55E" opacity="0.2"/>
+    <text x="456" y="416" font-family="monospace" font-size="12" font-weight="700" fill="#86EFAC">ENROLMENT</text>
+    <g font-family="monospace" font-size="10.5" fill="#94A3B8">
+      <text x="456" y="448"><tspan fill="#FACC15">PK</tspan>  enrolment_id</text>
+      <text x="456" y="468"><tspan fill="#F472B6">FK</tspan>  student_id → STUDENT</text>
+      <text x="456" y="488"><tspan fill="#F472B6">FK</tspan>  course_id → COURSE</text>
+      <text x="456" y="508">    semester, academic_year</text>
+      <text x="456" y="528">    grade, attendance_pct</text>
+    </g>
+  </g>
+
+  <!-- Entity: COURSE -->
+  <g>
+    <rect x="112" y="390" width="208" height="126" rx="12" fill="#0E1430" stroke="#F59E0B" stroke-opacity="0.35"/>
+    <rect x="112" y="390" width="208" height="30" rx="12" fill="#F59E0B" opacity="0.16"/>
+    <rect x="112" y="408" width="208" height="12" fill="#F59E0B" opacity="0.16"/>
+    <text x="128" y="410" font-family="monospace" font-size="12" font-weight="700" fill="#FCD34D">COURSE</text>
+    <g font-family="monospace" font-size="10.5" fill="#94A3B8">
+      <text x="128" y="442"><tspan fill="#FACC15">PK</tspan>  course_id</text>
+      <text x="128" y="462"><tspan fill="#F472B6">FK</tspan>  dept_id</text>
+      <text x="128" y="482">    title, credits</text>
+      <text x="128" y="502">    capacity, semester</text>
+    </g>
+  </g>
+
+  <!-- Entity: RESULT -->
+  <g>
+    <rect x="880" y="390" width="208" height="126" rx="12" fill="#0E1430" stroke="#06B6D4" stroke-opacity="0.35"/>
+    <rect x="880" y="390" width="208" height="30" rx="12" fill="#06B6D4" opacity="0.16"/>
+    <rect x="880" y="408" width="208" height="12" fill="#06B6D4" opacity="0.16"/>
+    <text x="896" y="410" font-family="monospace" font-size="12" font-weight="700" fill="#67E8F9">RESULT</text>
+    <g font-family="monospace" font-size="10.5" fill="#94A3B8">
+      <text x="896" y="442"><tspan fill="#FACC15">PK</tspan>  result_id</text>
+      <text x="896" y="462"><tspan fill="#F472B6">FK</tspan>  enrolment_id</text>
+      <text x="896" y="482">    marks, grade_point</text>
+      <text x="896" y="502">    published_at</text>
+    </g>
+  </g>
+
+  <!-- SQL snippet -->
+  <rect x="112" y="576" width="976" height="120" rx="14" fill="#080D1F" stroke="#FFFFFF" stroke-opacity="0.08"/>
+  <circle cx="134" cy="598" r="4.5" fill="#EF4444" opacity="0.7"/>
+  <circle cx="150" cy="598" r="4.5" fill="#F59E0B" opacity="0.7"/>
+  <circle cx="166" cy="598" r="4.5" fill="#22C55E" opacity="0.7"/>
+  <text x="188" y="602" font-family="monospace" font-size="10" fill="#475569">gpa_report.sql</text>
+  <g font-family="monospace" font-size="11.5">
+    <text x="134" y="628"><tspan fill="#C084FC">SELECT</tspan><tspan fill="#94A3B8"> s.student_id, s.full_name, </tspan><tspan fill="#67E8F9">ROUND</tspan><tspan fill="#94A3B8">(</tspan><tspan fill="#67E8F9">SUM</tspan><tspan fill="#94A3B8">(r.grade_point * c.credits) / </tspan><tspan fill="#67E8F9">SUM</tspan><tspan fill="#94A3B8">(c.credits), 2) </tspan><tspan fill="#C084FC">AS</tspan><tspan fill="#94A3B8"> gpa</tspan></text>
+    <text x="134" y="650"><tspan fill="#C084FC">FROM</tspan><tspan fill="#94A3B8"> student s </tspan><tspan fill="#C084FC">JOIN</tspan><tspan fill="#94A3B8"> enrolment e </tspan><tspan fill="#C084FC">ON</tspan><tspan fill="#94A3B8"> e.student_id = s.student_id </tspan><tspan fill="#C084FC">JOIN</tspan><tspan fill="#94A3B8"> result r </tspan><tspan fill="#C084FC">ON</tspan><tspan fill="#94A3B8"> r.enrolment_id = e.enrolment_id</tspan></text>
+    <text x="134" y="672"><tspan fill="#C084FC">JOIN</tspan><tspan fill="#94A3B8"> course c </tspan><tspan fill="#C084FC">ON</tspan><tspan fill="#94A3B8"> c.course_id = e.course_id  </tspan><tspan fill="#C084FC">GROUP BY</tspan><tspan fill="#94A3B8"> s.student_id  </tspan><tspan fill="#C084FC">ORDER BY</tspan><tspan fill="#94A3B8"> gpa </tspan><tspan fill="#C084FC">DESC</tspan><tspan fill="#94A3B8">;</tspan></text>
+  </g>
+</svg>

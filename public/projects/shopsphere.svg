@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-label="ShopSphere dashboard preview">
+  <defs>
+    <linearGradient id="ss-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#150E33"/>
+      <stop offset="55%" stop-color="#0A0F24"/>
+      <stop offset="100%" stop-color="#050816"/>
+    </linearGradient>
+    <linearGradient id="ss-brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+    <linearGradient id="ss-chart" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="ss-glow" cx="22%" cy="16%" r="60%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="ss-grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#94A3B8" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#ss-bg)"/>
+  <rect width="1200" height="750" fill="url(#ss-grid)"/>
+  <rect width="1200" height="750" fill="url(#ss-glow)"/>
+
+  <!-- Browser chrome -->
+  <rect x="80" y="70" width="1040" height="610" rx="22" fill="#0B1024" stroke="#FFFFFF" stroke-opacity="0.10"/>
+  <rect x="80" y="70" width="1040" height="52" rx="22" fill="#111838"/>
+  <rect x="80" y="104" width="1040" height="18" fill="#111838"/>
+  <circle cx="112" cy="96" r="6" fill="#EF4444" opacity="0.8"/>
+  <circle cx="134" cy="96" r="6" fill="#F59E0B" opacity="0.8"/>
+  <circle cx="156" cy="96" r="6" fill="#22C55E" opacity="0.8"/>
+  <rect x="190" y="86" width="330" height="20" rx="10" fill="#0A0F24" stroke="#FFFFFF" stroke-opacity="0.07"/>
+  <text x="206" y="101" font-family="monospace" font-size="12" fill="#64748B">shopsphere.app/seller</text>
+
+  <!-- Sidebar -->
+  <rect x="100" y="140" width="180" height="518" rx="16" fill="#0E1430"/>
+  <rect x="120" y="164" width="34" height="34" rx="10" fill="url(#ss-brand)"/>
+  <rect x="164" y="174" width="82" height="14" rx="7" fill="#FFFFFF" opacity="0.85"/>
+  <g fill="#FFFFFF" opacity="0.10">
+    <rect x="120" y="230" width="140" height="34" rx="9"/>
+    <rect x="120" y="322" width="140" height="34" rx="9"/>
+    <rect x="120" y="368" width="140" height="34" rx="9"/>
+    <rect x="120" y="414" width="140" height="34" rx="9"/>
+    <rect x="120" y="460" width="140" height="34" rx="9"/>
+  </g>
+  <rect x="120" y="276" width="140" height="34" rx="9" fill="#7C3AED" opacity="0.30"/>
+  <rect x="120" y="276" width="3" height="34" rx="2" fill="#C084FC"/>
+
+  <!-- KPI cards -->
+  <g>
+    <rect x="304" y="140" width="252" height="118" rx="16" fill="#0E1430" stroke="#FFFFFF" stroke-opacity="0.07"/>
+    <text x="326" y="176" font-family="'Segoe UI',sans-serif" font-size="13" fill="#64748B">Total Revenue</text>
+    <text x="326" y="214" font-family="'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">₹8,42,900</text>
+    <text x="326" y="238" font-family="'Segoe UI',sans-serif" font-size="12" fill="#22C55E">▲ 18.4% this month</text>
+
+    <rect x="580" y="140" width="252" height="118" rx="16" fill="#0E1430" stroke="#FFFFFF" stroke-opacity="0.07"/>
+    <text x="602" y="176" font-family="'Segoe UI',sans-serif" font-size="13" fill="#64748B">Orders</text>
+    <text x="602" y="214" font-family="'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">3,284</text>
+    <text x="602" y="238" font-family="'Segoe UI',sans-serif" font-size="12" fill="#22C55E">▲ 9.2% this week</text>
+
+    <rect x="856" y="140" width="244" height="118" rx="16" fill="#0E1430" stroke="#FFFFFF" stroke-opacity="0.07"/>
+    <text x="878" y="176" font-family="'Segoe UI',sans-serif" font-size="13" fill="#64748B">Active Sellers</text>
+    <text x="878" y="214" font-family="'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">412</text>
+    <text x="878" y="238" font-family="'Segoe UI',sans-serif" font-size="12" fill="#06B6D4">● 38 pending review</text>
+  </g>
+
+  <!-- Chart -->
+  <rect x="304" y="282" width="528" height="290" rx="16" fill="#0E1430" stroke="#FFFFFF" stroke-opacity="0.07"/>
+  <text x="326" y="316" font-family="'Segoe UI',sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">Revenue Overview</text>
+  <path d="M330 520 L400 470 L470 490 L540 410 L610 436 L680 356 L750 384 L808 322" fill="none" stroke="url(#ss-brand)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M330 520 L400 470 L470 490 L540 410 L610 436 L680 356 L750 384 L808 322 L808 548 L330 548 Z" fill="url(#ss-chart)"/>
+  <g fill="#C084FC">
+    <circle cx="400" cy="470" r="4"/><circle cx="540" cy="410" r="4"/><circle cx="680" cy="356" r="4"/><circle cx="808" cy="322" r="4"/>
+  </g>
+  <g stroke="#94A3B8" stroke-opacity="0.08" stroke-width="1">
+    <line x1="330" y1="548" x2="808" y2="548"/><line x1="330" y1="490" x2="808" y2="490"/><line x1="330" y1="432" x2="808" y2="432"/><line x1="330" y1="374" x2="808" y2="374"/>
+  </g>
+
+  <!-- Recent orders -->
+  <rect x="856" y="282" width="244" height="290" rx="16" fill="#0E1430" stroke="#FFFFFF" stroke-opacity="0.07"/>
+  <text x="878" y="316" font-family="'Segoe UI',sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">Recent Orders</text>
+  <g>
+    <rect x="878" y="336" width="200" height="46" rx="10" fill="#FFFFFF" opacity="0.04"/>
+    <circle cx="902" cy="359" r="11" fill="#7C3AED" opacity="0.35"/>
+    <rect x="922" y="350" width="96" height="8" rx="4" fill="#FFFFFF" opacity="0.55"/>
+    <rect x="922" y="364" width="60" height="7" rx="3.5" fill="#FFFFFF" opacity="0.22"/>
+    <rect x="1040" y="354" width="30" height="14" rx="7" fill="#22C55E" opacity="0.3"/>
+
+    <rect x="878" y="392" width="200" height="46" rx="10" fill="#FFFFFF" opacity="0.04"/>
+    <circle cx="902" cy="415" r="11" fill="#06B6D4" opacity="0.35"/>
+    <rect x="922" y="406" width="84" height="8" rx="4" fill="#FFFFFF" opacity="0.55"/>
+    <rect x="922" y="420" width="70" height="7" rx="3.5" fill="#FFFFFF" opacity="0.22"/>
+    <rect x="1040" y="410" width="30" height="14" rx="7" fill="#F59E0B" opacity="0.3"/>
+
+    <rect x="878" y="448" width="200" height="46" rx="10" fill="#FFFFFF" opacity="0.04"/>
+    <circle cx="902" cy="471" r="11" fill="#22C55E" opacity="0.35"/>
+    <rect x="922" y="462" width="104" height="8" rx="4" fill="#FFFFFF" opacity="0.55"/>
+    <rect x="922" y="476" width="54" height="7" rx="3.5" fill="#FFFFFF" opacity="0.22"/>
+    <rect x="1040" y="466" width="30" height="14" rx="7" fill="#22C55E" opacity="0.3"/>
+
+    <rect x="878" y="504" width="200" height="46" rx="10" fill="#FFFFFF" opacity="0.04"/>
+    <circle cx="902" cy="527" r="11" fill="#A78BFA" opacity="0.35"/>
+    <rect x="922" y="518" width="90" height="8" rx="4" fill="#FFFFFF" opacity="0.55"/>
+    <rect x="922" y="532" width="64" height="7" rx="3.5" fill="#FFFFFF" opacity="0.22"/>
+    <rect x="1040" y="522" width="30" height="14" rx="7" fill="#06B6D4" opacity="0.3"/>
+  </g>
+
+  <!-- Footer strip -->
+  <rect x="304" y="596" width="796" height="62" rx="16" fill="#0E1430" stroke="#FFFFFF" stroke-opacity="0.07"/>
+  <g font-family="'Segoe UI',sans-serif" font-size="12" fill="#94A3B8">
+    <text x="330" y="633">Next.js</text><text x="404" y="633">TypeScript</text><text x="498" y="633">PostgreSQL</text><text x="600" y="633">Prisma</text><text x="668" y="633">Razorpay</text><text x="756" y="633">Auth.js</text>
+  </g>
+  <rect x="990" y="614" width="86" height="26" rx="13" fill="#22C55E" opacity="0.18"/>
+  <text x="1033" y="631" font-family="'Segoe UI',sans-serif" font-size="12" fill="#86EFAC" text-anchor="middle">● Live</text>
+</svg>
