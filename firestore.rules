@@ -2,24 +2,17 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    // Portfolio cards are world-readable; writes are server-only.
+    // Every project is a document in /projects.
+    // The portfolio card itself is world-readable;
+    // any application data beneath it is server-only.
+
     match /projects/{slug} {
       allow read: if true;
       allow write: if false;
     }
 
-    // Application data beneath a project is server-only.
     match /projects/{slug}/{rest=**} {
       allow read, write: if false;
-    }
-
-    // Auth user profiles.
-    // Anyone can read/write their own profile (the client writes it after
-    // sign-up and reads it on every page load). Everything else is denied —
-    // you cannot list users or read someone else's profile from the client.
-    match /auth_users/{uid} {
-      allow read: if request.auth != null && request.auth.uid == uid;
-      allow write: if request.auth != null && request.auth.uid == uid;
     }
   }
 }

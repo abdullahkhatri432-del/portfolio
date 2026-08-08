@@ -24,40 +24,12 @@ ever sits outside it.
 /projects/hospital-erp/appointments/{id}
 ```
 
-## Authentication
-
-Auth lives in two places:
-
-- **Firebase Auth** — email + password, managed by Firebase.
-- **Firestore `auth_users/{uid}`** — profile data (role, projectId, phone…).
-
-A user's `projectId` ties them to a project; their `role` decides what they can
-do within it.
-
-```
-/auth_users/{uid}        role, projectId, displayName, phone, status...
-```
-
-### Roles per project
-
-| Project | Roles |
-|---|---|
-| ai-interview-simulator | candidate, admin |
-| gamevault-pro | user, admin |
-| hospital-erp | patient, doctor, admin |
-| multi-vendor-marketplace | customer, vendor, admin |
-| next-build | team-member, admin |
-| shopsphere / shopverse | customer, admin |
-| university-management-system | student, faculty, admin |
-| world-explorer | traveler, admin |
-
 ## Adding a new project
 
 1. Add its portfolio card to `/projects` via `npm run add-project`.
 2. If it has its own data, create subcollections under its document — never at
    the top level.
-3. Seed users with `npm run seed:auth`.
-4. Update security rules so public data stays public and private data stays
+3. Update security rules so public data stays public and private data stays
    server-only.
 
 ## Security rules
@@ -73,11 +45,6 @@ match /projects/{slug} {
 
 match /projects/{slug}/{rest=**} {
   allow read, write: if false;
-}
-
-match /auth_users/{uid} {
-  // Users can read/write their own profile only.
-  allow read, write: if request.auth != null && request.auth.uid == uid;
 }
 ```
 

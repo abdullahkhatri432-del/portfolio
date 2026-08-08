@@ -1,137 +1,145 @@
 "use client";
 
-import * as React from "react";
-import { ArrowUpRight, Sparkles } from "lucide-react";
-import { FaGithub } from "react-icons/fa6";
+import Image from "next/image";
+import { useState } from "react";
+import { ExternalLink } from "lucide-react";
 
-import { siteConfig } from "@/constants/site";
-import { scrollToSection, useLenis } from "@/hooks/use-lenis";
 import type { Project } from "@/types";
-import { Button } from "@/components/ui/button";
-import { Magnetic } from "@/components/ui/magnetic";
-import { Reveal } from "@/components/ui/reveal";
-import { Section } from "@/components/ui/section";
-import { SectionHeading } from "@/components/ui/section-heading";
-
-import { ProjectCard } from "./project-card";
-import { ProjectModal } from "./project-modal";
 
 export function Projects({ projects }: { projects: Project[] }) {
-  const [selected, setSelected] = React.useState<Project | null>(null);
-  const lenis = useLenis();
-
-  // Freeze background scrolling while the modal is open.
-  React.useEffect(() => {
-    if (selected) {
-      lenis?.stop();
-      document.body.style.overflow = "hidden";
-    } else {
-      lenis?.start();
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [selected, lenis]);
-
-  // Close on Escape.
-  React.useEffect(() => {
-    const onKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setSelected(null);
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, []);
+  const [selected, setSelected] = useState<Project | null>(null);
 
   return (
-    <Section id="projects">
-      <SectionHeading
-        eyebrow="Featured Work"
-        title="Projects built to"
-        highlight="ship and scale"
-        description="Production platforms and deep technical builds — each one shipped end to end, from schema design to deployment."
-      />
+    <section id="projects" className="section border-b border-slate-200 bg-slate-50">
+      <div className="container">
+        <h2 className="section-title">Projects</h2>
+        <p className="section-subtitle">
+          Production platforms and technical builds.
+        </p>
 
-      {projects.length === 0 && (
-        <div className="mt-16 rounded-3xl border border-dashed border-white/12 p-10 text-center">
-          <p className="text-sm text-muted">No projects loaded.</p>
-          <p className="mt-2 text-xs text-subtle">
-            Projects are served from Firestore. Check that the
-            NEXT_PUBLIC_FIREBASE_* environment variables are set and the
-            collection has been seeded.
-          </p>
+        {projects.length === 0 && (
+          <div className="card text-center text-slate-500">
+            No projects loaded. Check Firestore connection.
+          </div>
+        )}
+
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project) => (
+            <article
+              key={project.id}
+              className="card cursor-pointer hover:border-slate-300 hover:shadow-sm transition-all"
+              onClick={() => setSelected(project)}
+            >
+              {project.image && (
+                <div className="relative -mx-6 -mt-6 mb-4 aspect-video overflow-hidden rounded-t-lg bg-slate-100">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              )}
+              <div className="flex items-start justify-between gap-2">
+                <h3 className="font-semibold text-slate-900">
+                  {project.title}
+                </h3>
+                <span
+                  className={`badge ${
+                    project.status === "Live"
+                      ? "bg-green-50 text-green-700 border-green-200"
+                      : "bg-slate-50 text-slate-600"
+                  }`}
+                >
+                  {project.status}
+                </span>
+              </div>
+              <p className="mt-2 text-sm text-slate-600 line-clamp-2">
+                {project.description}
+              </p>
+              <div className="mt-3 flex flex-wrap gap-1.5">
+                {project.stack.slice(0, 4).map((tech) => (
+                  <span key={tech} className="badge">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </article>
+          ))}
         </div>
-      )}
-
-      <div className="mt-16 space-y-8 lg:space-y-10">
-        {projects.map((project, index) => (
-          <ProjectCard
-            key={project.id}
-            project={project}
-            index={index}
-            onOpen={setSelected}
-          />
-        ))}
       </div>
 
-      {/* CTA */}
-      <Reveal delay={0.1} className="mt-14">
-        <div className="glass relative overflow-hidden rounded-3xl p-8 text-center sm:p-12">
+      {/* Simple modal */}
+      {selected && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+          onClick={() => setSelected(null)}
+        >
           <div
-            aria-hidden
-            className="pointer-events-none absolute -top-24 left-1/2 size-72 -translate-x-1/2 rounded-full blur-[100px]"
-            style={{
-              background:
-                "radial-gradient(circle, rgba(124,58,237,0.35), transparent 65%)",
-            }}
-          />
+            className="w-full max-w-lg rounded-lg bg-white p-6 shadow-xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-start justify-between">
+              <h3 className="text-xl font-bold text-slate-900">
+                {selected.title}
+              </h3>
+              <button
+                onClick={() => setSelected(null)}
+                className="text-slate-400 hover:text-slate-600"
+              >
+                ✕
+              </button>
+            </div>
+            <p className="mt-3 text-slate-600">{selected.description}</p>
 
-          <div className="relative">
-            <span className="from-primary/25 to-secondary/25 mx-auto mb-4 flex size-12 items-center justify-center rounded-2xl bg-gradient-to-br ring-1 ring-white/10">
-              <Sparkles className="text-secondary-soft size-5" />
-            </span>
+            {selected.metrics?.length > 0 && (
+              <div className="mt-4 flex flex-wrap gap-4 border-t border-slate-100 pt-4">
+                {selected.metrics.map((m) => (
+                  <div key={m.label}>
+                    <div className="text-lg font-bold text-slate-900">
+                      {m.value}
+                    </div>
+                    <div className="text-xs text-slate-500">{m.label}</div>
+                  </div>
+                ))}
+              </div>
+            )}
 
-            <h3 className="font-display text-2xl font-bold text-white sm:text-3xl">
-              More on the way
-            </h3>
-            <p className="text-muted mx-auto mt-3 max-w-lg text-sm leading-relaxed sm:text-base">
-              I&apos;m always building. Explore the full archive on GitHub, or
-              bring me a problem worth solving and let&apos;s make the next one
-              together.
-            </p>
+            <div className="mt-4 flex flex-wrap gap-1.5">
+              {selected.stack.map((tech) => (
+                <span key={tech} className="badge">
+                  {tech}
+                </span>
+              ))}
+            </div>
 
-            <div className="mt-7 flex flex-wrap justify-center gap-3">
-              <Magnetic strength={0.25}>
-                <Button variant="primary" size="lg" asChild>
-                  <a
-                    href={siteConfig.links.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group"
-                    data-cursor-label="GitHub"
-                  >
-                    <FaGithub />
-                    View All Repositories
-                    <ArrowUpRight className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </a>
-                </Button>
-              </Magnetic>
-
-              <Magnetic strength={0.25}>
-                <Button
-                  variant="secondary"
-                  size="lg"
-                  onClick={() => scrollToSection(lenis, "#contact")}
+            <div className="mt-6 flex gap-3">
+              {selected.links.demo && (
+                <a
+                  href={selected.links.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
                 >
-                  Start a Project
-                </Button>
-              </Magnetic>
+                  <ExternalLink size={14} />
+                  Live Demo
+                </a>
+              )}
+              {selected.links.github && (
+                <a
+                  href={selected.links.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-secondary"
+                >
+                  <span className="text-xs font-medium">Code</span>
+                  Code
+                </a>
+              )}
             </div>
           </div>
         </div>
-      </Reveal>
-
-      <ProjectModal project={selected} onClose={() => setSelected(null)} />
-    </Section>
+      )}
+    </section>
   );
 }

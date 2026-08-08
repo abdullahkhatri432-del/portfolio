@@ -51,6 +51,7 @@ next-env.d.ts
 # local deployment notes (contains secrets)
 VERCEL-ENV.txt
 
-# Firebase service account — never commit
+# Firebase service account ï¿½ never commit
 serviceAccountKey.json
 *-firebase-adminsdk-*.json
+.vercel

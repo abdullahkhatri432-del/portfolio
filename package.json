@@ -22,8 +22,7 @@
                     "seed:firestore":  "node scripts/seed-firestore.mjs",
                     "add:project":  "node scripts/add-project.mjs",
                     "list:projects":  "node scripts/list-projects.mjs",
-                    "seed:demo":  "node scripts/seed-demo-data.mjs",
-                    "seed:auth":  "node scripts/seed-auth.mjs"
+                    "seed:demo":  "node scripts/seed-demo-data.mjs"
                 },
     "dependencies":  {
                          "@hookform/resolvers":  "^5.7.1",
