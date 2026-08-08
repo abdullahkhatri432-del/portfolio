@@ -1,5 +1,6 @@
 import { initializeApp, getApps, getApp, type FirebaseApp } from "firebase/app";
 import { getFirestore, type Firestore } from "firebase/firestore";
+import { getAuth, type Auth } from "firebase/auth";
 
 /**
  * Firebase initialisation.
@@ -29,6 +30,7 @@ export function isFirebaseConfigured(): boolean {
 
 let cachedApp: FirebaseApp | null = null;
 let cachedDb: Firestore | null = null;
+let cachedAuth: Auth | null = null;
 
 /**
  * Get the Firestore instance.
@@ -43,4 +45,20 @@ export function getDb(): Firestore | null {
   }
 
   return cachedDb;
+}
+
+/**
+ * Get the Firebase Auth instance (client-side only).
+ */
+export function getFirebaseAuth(): Auth | null {
+  if (!isFirebaseConfigured()) return null;
+
+  if (!cachedAuth) {
+    if (!cachedApp) {
+      cachedApp = getApps().length ? getApp() : initializeApp(firebaseConfig);
+    }
+    cachedAuth = getAuth(cachedApp);
+  }
+
+  return cachedAuth;
 }

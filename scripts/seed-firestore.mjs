@@ -20,6 +20,9 @@ import { fileURLToPath } from "node:url";
 import { initializeApp, cert, getApps } from "firebase-admin/app";
 import { getFirestore, FieldValue } from "firebase-admin/firestore";
 
+// Namespaced per app: collection(apps)/doc(portfolio)/collection(projects).
+const PROJECTS_PATH = "projects";
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
 
@@ -127,7 +130,7 @@ projects.forEach((project, index) => {
   };
 
   // Keyed by slug so re-running updates rather than duplicating.
-  batch.set(db.collection("projects").doc(project.slug), document, {
+  batch.set(db.collection(PROJECTS_PATH).doc(project.slug), document, {
     merge: true,
   });
 
@@ -139,7 +142,7 @@ projects.forEach((project, index) => {
 
 await batch.commit();
 
-const snapshot = await db.collection("projects").get();
+const snapshot = await db.collection(PROJECTS_PATH).get();
 
 console.log(`\nCommitted ${projects.length} documents.`);
 console.log(`Collection now holds ${snapshot.size} projects.`);

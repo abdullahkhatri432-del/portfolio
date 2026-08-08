@@ -1,8 +1,9 @@
 "use client";
 
+import * as React from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
-import { ArrowUpRight, Info, Lock } from "lucide-react";
+import { ArrowUpRight, Info, Lock, LogIn } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
 
 import type { Project } from "@/types";
@@ -11,6 +12,7 @@ import { premiumEase, viewportOnce } from "@/utils/motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { TiltCard } from "@/components/ui/tilt-card";
+import { LoginSheet } from "./login-sheet";
 
 interface ProjectCardProps {
   project: Project;
@@ -27,6 +29,7 @@ const statusVariant = {
 
 export function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
   const isPlanned = project.status === "Planned";
+  const [showLogin, setShowLogin] = React.useState(false);
   // Alternate layout direction for a magazine-style rhythm.
   const reversed = index % 2 === 1;
 
@@ -215,10 +218,27 @@ export function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
                   </a>
                 </Button>
               )}
+
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={() => setShowLogin(true)}
+                data-cursor-label="Login"
+              >
+                <LogIn />
+                Login
+              </Button>
             </div>
           </div>
         </div>
       </TiltCard>
+
+      <LoginSheet
+        open={showLogin}
+        onOpenChange={setShowLogin}
+        projectId={project.id}
+        projectTitle={project.title}
+      />
     </motion.article>
   );
 }

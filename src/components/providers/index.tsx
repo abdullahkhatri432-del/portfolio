@@ -8,16 +8,18 @@ import { LoadingScreen } from "./loading-screen";
 import { PageTransition } from "./page-transition";
 import { ScrollProgress } from "./scroll-progress";
 import { SmoothScrollProvider } from "./smooth-scroll-provider";
+import { AuthProvider } from "@/contexts/AuthContext";
 
 /** Composes every client-side provider and global overlay. */
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <SmoothScrollProvider>
-      <LoadingScreen />
-      <ScrollProgress />
-      <Cursor />
-      <PageTransition>{children}</PageTransition>
-      <Toaster
+    <AuthProvider>
+      <SmoothScrollProvider>
+        <LoadingScreen />
+        <ScrollProgress />
+        <Cursor />
+        <PageTransition>{children}</PageTransition>
+        <Toaster
         position="bottom-right"
         theme="dark"
         richColors
@@ -30,7 +32,9 @@ export function Providers({ children }: { children: React.ReactNode }) {
             color: "#fff",
           },
         }}
+
       />
-    </SmoothScrollProvider>
+      </SmoothScrollProvider>
+    </AuthProvider>
   );
 }

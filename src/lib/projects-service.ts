@@ -1,4 +1,4 @@
-import {
+﻿﻿import {
   addDoc,
   collection,
   deleteDoc,
@@ -26,6 +26,13 @@ import type { Project } from "@/types";
  * missing field must not crash the page.
  */
 
+/**
+ * Every project lives as a document in the top-level `projects` collection.
+ *
+ * A project that has its own application data keeps it in subcollections
+ * beneath its own document -- for example projects/talentos/organizations --
+ * so nothing belonging to one project ever sits outside it.
+ */
 const COLLECTION = "projects";
 
 /** Firestore document shape, before normalisation. */

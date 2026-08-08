@@ -17,6 +17,9 @@ import { stdin, stdout } from "node:process";
 import { initializeApp, cert, getApps } from "firebase-admin/app";
 import { getFirestore, FieldValue } from "firebase-admin/firestore";
 
+// Namespaced per app: collection(apps)/doc(portfolio)/collection(projects).
+const PROJECTS_PATH = "projects";
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
 
@@ -131,7 +134,7 @@ const STATUSES = ["Live", "Completed", "In Development", "Planned"];
 
 console.log(`\n${cyan("Add a project")} — ${serviceAccount.project_id}\n`);
 
-const existing = await db.collection("projects").get();
+const existing = await db.collection(PROJECTS_PATH).get();
 console.log(dim(`  ${existing.size} projects currently in the collection\n`));
 
 const title = await askRequired("Title");
@@ -248,9 +251,9 @@ if (!duplicate && placeholder) {
     .update({ order: order + 1 });
 }
 
-await db.collection("projects").doc(slug).set(document, { merge: true });
+await db.collection(PROJECTS_PATH).doc(slug).set(document, { merge: true });
 
-const after = await db.collection("projects").get();
+const after = await db.collection(PROJECTS_PATH).get();
 
 console.log(`\n  ${green("✓")} ${duplicate ? "Updated" : "Added"} "${title}"`);
 console.log(dim(`  Collection now holds ${after.size} projects.`));

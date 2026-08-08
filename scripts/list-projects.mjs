@@ -14,6 +14,9 @@ import { fileURLToPath } from "node:url";
 import { initializeApp, cert, getApps } from "firebase-admin/app";
 import { getFirestore } from "firebase-admin/firestore";
 
+// Namespaced per app: collection(apps)/doc(portfolio)/collection(projects).
+const PROJECTS_PATH = "projects";
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
 const keyPath = resolve(root, "serviceAccountKey.json");
@@ -37,7 +40,7 @@ const dim = (text) => `\x1b[2m${text}\x1b[0m`;
 const green = (text) => `\x1b[32m${text}\x1b[0m`;
 const amber = (text) => `\x1b[33m${text}\x1b[0m`;
 
-const snapshot = await db.collection("projects").orderBy("order", "asc").get();
+const snapshot = await db.collection(PROJECTS_PATH).orderBy("order", "asc").get();
 
 console.log(`\n${snapshot.size} projects in ${serviceAccount.project_id}\n`);
 

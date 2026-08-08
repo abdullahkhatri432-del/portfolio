@@ -9,6 +9,33 @@ const env = (key: string, fallback: string) => {
   return value && value.trim().length > 0 ? value.trim() : fallback;
 };
 
+/**
+ * Resolve the canonical site URL.
+ *
+ * Vercel assigns a new hostname on most deployments, so hard-coding it in an
+ * environment variable means canonical tags and Open Graph URLs drift out of
+ * date every time the project is redeployed.
+ *
+ * Resolution order:
+ *   1. NEXT_PUBLIC_SITE_URL — an explicit custom domain, when one is set
+ *   2. VERCEL_PROJECT_PRODUCTION_URL — the stable production hostname,
+ *      injected by Vercel and unchanged across deployments
+ *   3. VERCEL_URL — the per-deployment hostname, used for previews
+ *   4. localhost, for development
+ */
+function resolveSiteUrl(): string {
+  const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  if (explicit) return explicit.replace(/\/$/, "");
+
+  const production = process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim();
+  if (production) return `https://${production}`;
+
+  const deployment = process.env.VERCEL_URL?.trim();
+  if (deployment) return `https://${deployment}`;
+
+  return "http://localhost:3000";
+}
+
 export const GITHUB_USERNAME = env(
   "NEXT_PUBLIC_GITHUB_USERNAME",
   "abdullahkhatri432-del",
@@ -35,7 +62,7 @@ export const siteConfig = {
    * portrait. Bump this as you ship more — keep it honest and verifiable.
    */
   projectsShipped: 5,
-  url: env("NEXT_PUBLIC_SITE_URL", "https://abdullahkhatri.vercel.app"),
+  url: resolveSiteUrl(),
   ogImage: "/opengraph-image",
   keywords: [
     "Abdullah Khatri",
