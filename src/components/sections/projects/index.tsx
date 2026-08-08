@@ -5,7 +5,6 @@ import { ArrowUpRight, Sparkles } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
 
 import { siteConfig } from "@/constants/site";
-import { PROJECTS } from "@/data/projects";
 import { scrollToSection, useLenis } from "@/hooks/use-lenis";
 import type { Project } from "@/types";
 import { Button } from "@/components/ui/button";
@@ -17,7 +16,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { ProjectCard } from "./project-card";
 import { ProjectModal } from "./project-modal";
 
-export function Projects() {
+export function Projects({ projects }: { projects: Project[] }) {
   const [selected, setSelected] = React.useState<Project | null>(null);
   const lenis = useLenis();
 
@@ -53,8 +52,19 @@ export function Projects() {
         description="Production platforms and deep technical builds — each one shipped end to end, from schema design to deployment."
       />
 
+      {projects.length === 0 && (
+        <div className="mt-16 rounded-3xl border border-dashed border-white/12 p-10 text-center">
+          <p className="text-sm text-muted">No projects loaded.</p>
+          <p className="mt-2 text-xs text-subtle">
+            Projects are served from Firestore. Check that the
+            NEXT_PUBLIC_FIREBASE_* environment variables are set and the
+            collection has been seeded.
+          </p>
+        </div>
+      )}
+
       <div className="mt-16 space-y-8 lg:space-y-10">
-        {PROJECTS.map((project, index) => (
+        {projects.map((project, index) => (
           <ProjectCard
             key={project.id}
             project={project}

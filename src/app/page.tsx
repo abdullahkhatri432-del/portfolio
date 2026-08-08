@@ -6,6 +6,7 @@ import { Hero } from "@/components/sections/hero";
 import { About } from "@/components/sections/about";
 import { Skills } from "@/components/sections/skills";
 import { Projects } from "@/components/sections/projects";
+import { fetchProjects } from "@/lib/projects-service";
 
 /**
  * Below-the-fold sections are code-split so the initial bundle only
@@ -36,7 +37,19 @@ const Contact = dynamic(() =>
   import("@/components/sections/contact").then((m) => m.Contact),
 );
 
-export default function HomePage() {
+/**
+ * Projects are fetched on the server so they render into the HTML.
+ * A client-side fetch would keep them out of the page source, which would
+ * cost search indexing and show a loading state on every visit.
+ *
+ * Revalidated hourly: the collection changes rarely, and a static shell
+ * keeps first paint fast.
+ */
+export const revalidate = 3600;
+
+export default async function HomePage() {
+  const projects = await fetchProjects();
+
   return (
     <>
       <Navbar />
@@ -45,7 +58,7 @@ export default function HomePage() {
         <Hero />
         <About />
         <Skills />
-        <Projects />
+        <Projects projects={projects} />
         <Experience />
         <Certifications />
         <Achievements />
