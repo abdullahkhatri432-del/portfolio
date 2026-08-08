@@ -360,48 +360,6 @@ export const PROJECTS: Project[] = [
     },
   },
   {
-    id: "hr-platform",
-    slug: "hr-platform",
-    title: "Hirelane HR Platform",
-    tagline: "Statutory Payroll Engine",
-    category: "Enterprise / HR Tech",
-    year: "2026",
-    status: "Completed",
-    featured: true,
-    description:
-      "An HR platform built around two verifiable engines — Indian statutory payroll computing EPF, ESI, professional tax and TDS to the rupee, and a deterministic resume parser with explainable candidate scoring.",
-    longDescription:
-      "Hirelane covers recruitment, payroll, leave, attendance and performance, but its substance is the payroll engine. It implements EPF at 12% on basic plus DA against the ₹15,000 statutory ceiling, the EPS carve-out at 8.33%, EDLI and admin charges, ESI at 0.75% and 3.25% on gross up to ₹21,000, professional tax across six state slab structures, and income tax under the Finance Act 2025 including the Section 87A rebate, marginal relief above the rebate ceiling, surcharge and cess. Every rate was verified against current published figures rather than recalled, and the output was checked line by line against hand-calculation. Each payslip line carries a basis string naming the rule that produced it, so the document is auditable rather than a black box. The resume parser is regex and dictionary based, with alias-aware skill matching and date-range experience inference that merges overlapping roles. I deliberately replaced the AI HR chatbot with a deterministic policy engine: employees ask questions with legal and financial consequences, so answers are computed from the same functions payroll uses and cite the statute they derive from.",
-    features: [
-      "EPF, EPS, EDLI and admin charges against the ₹15,000 statutory ceiling",
-      "ESI at 0.75% and 3.25% with correct wage-ceiling handling",
-      "Professional tax across six state slab structures plus exempt states",
-      "Income tax with Section 87A rebate, marginal relief, surcharge and cess",
-      "Gratuity under the Payment of Gratuity Act 1972 with the ₹20L cap",
-      "Every payslip line traced to the rule that produced it",
-      "Deterministic resume parser with alias-aware skill matching",
-      "Policy engine replacing an LLM chatbot, with citations and workings",
-    ],
-    stack: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Statutory Compliance",
-      "Rules Engine",
-    ],
-    metrics: [
-      { label: "Statutory Rules", value: "7" },
-      { label: "Modules", value: "8" },
-      { label: "Verified Cases", value: "7/7" },
-    ],
-    gradient: "from-indigo-500/25 via-purple-500/10 to-transparent",
-    accent: "#6366F1",
-    image: "/projects/hr-platform.svg",
-    links: {
-      github: `${siteConfig.links.github}/hr-platform`,
-    },
-  },
-  {
     id: "next-build",
     slug: "next-build",
     title: "Next Project",
