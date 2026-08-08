@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-label="HR platform payroll dashboard preview">
+  <defs>
+    <linearGradient id="hr-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1A1233"/>
+      <stop offset="55%" stop-color="#0A0A0F"/>
+      <stop offset="100%" stop-color="#060609"/>
+    </linearGradient>
+    <linearGradient id="hr-brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+    <radialGradient id="hr-glow" cx="26%" cy="14%" r="62%">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="hr-grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#A1A1AA" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#hr-bg)"/>
+  <rect width="1200" height="750" fill="url(#hr-grid)"/>
+  <rect width="1200" height="750" fill="url(#hr-glow)"/>
+
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="200" height="750" fill="#121218"/>
+  <line x1="200" y1="0" x2="200" y2="750" stroke="#FFFFFF" stroke-opacity="0.07"/>
+
+  <rect x="22" y="24" width="32" height="32" rx="9" fill="url(#hr-brand)"/>
+  <text x="38" y="46" font-family="'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">H</text>
+  <text x="64" y="41" font-family="'Segoe UI',sans-serif" font-size="14.5" font-weight="700" fill="#FAFAFA">Hirelane</text>
+  <text x="64" y="55" font-family="'Segoe UI',sans-serif" font-size="9" fill="#71717A">HR Platform</text>
+  <line x1="0" y1="78" x2="200" y2="78" stroke="#FFFFFF" stroke-opacity="0.07"/>
+
+  <text x="24" y="104" font-family="'Segoe UI',sans-serif" font-size="8.5" letter-spacing="1.3" fill="#71717A">WORKSPACE</text>
+  <g font-family="'Segoe UI',sans-serif" font-size="11" fill="#A1A1AA">
+    <text x="44" y="130">Overview</text>
+    <text x="44" y="158">People</text>
+    <text x="44" y="186">Recruitment</text>
+  </g>
+  <g fill="#52525B"><circle cx="30" cy="126" r="3.5"/><circle cx="30" cy="154" r="3.5"/><circle cx="30" cy="182" r="3.5"/></g>
+
+  <text x="24" y="220" font-family="'Segoe UI',sans-serif" font-size="8.5" letter-spacing="1.3" fill="#71717A">OPERATIONS</text>
+  <rect x="14" y="230" width="172" height="28" rx="8" fill="#6366F1" opacity="0.14"/>
+  <rect x="14" y="230" width="3" height="28" rx="1.5" fill="#6366F1"/>
+  <text x="44" y="249" font-family="'Segoe UI',sans-serif" font-size="11" fill="#A5B4FC">Payroll</text>
+  <circle cx="30" cy="245" r="3.5" fill="#818CF8"/>
+  <g font-family="'Segoe UI',sans-serif" font-size="11" fill="#A1A1AA">
+    <text x="44" y="277">Leave</text>
+    <text x="44" y="305">Attendance</text>
+    <text x="44" y="333">Performance</text>
+  </g>
+  <g fill="#52525B"><circle cx="30" cy="273" r="3.5"/><circle cx="30" cy="301" r="3.5"/><circle cx="30" cy="329" r="3.5"/></g>
+
+  <text x="24" y="367" font-family="'Segoe UI',sans-serif" font-size="8.5" letter-spacing="1.3" fill="#71717A">SELF-SERVICE</text>
+  <text x="44" y="392" font-family="'Segoe UI',sans-serif" font-size="11" fill="#A1A1AA">Policy assistant</text>
+  <circle cx="30" cy="388" r="3.5" fill="#52525B"/>
+
+  <text x="22" y="716" font-family="'Segoe UI',sans-serif" font-size="8.5" fill="#3F3F46">Demonstration system.</text>
+  <text x="22" y="729" font-family="'Segoe UI',sans-serif" font-size="8.5" fill="#3F3F46">All records fictional.</text>
+
+  <!-- Header -->
+  <text x="232" y="40" font-family="'Segoe UI',sans-serif" font-size="16.5" font-weight="700" fill="#FAFAFA">Payroll</text>
+  <text x="232" y="58" font-family="'Segoe UI',sans-serif" font-size="10.5" fill="#71717A">Statutory computation with full workings</text>
+  <text x="1164" y="48" font-family="monospace" font-size="10.5" fill="#52525B" text-anchor="end">FY 2026-27</text>
+  <line x1="200" y1="78" x2="1200" y2="78" stroke="#FFFFFF" stroke-opacity="0.07"/>
+
+  <!-- KPI row -->
+  <g>
+    <rect x="232" y="98" width="222" height="82" rx="13" fill="#121218" stroke="#FFFFFF" stroke-opacity="0.07"/>
+    <text x="252" y="122" font-family="'Segoe UI',sans-serif" font-size="8.5" letter-spacing="1.2" fill="#71717A">GROSS PAYROLL</text>
+    <text x="252" y="154" font-family="monospace" font-size="21" font-weight="700" fill="#FAFAFA">₹8.14L</text>
+
+    <rect x="470" y="98" width="222" height="82" rx="13" fill="#121218" stroke="#FFFFFF" stroke-opacity="0.07"/>
+    <text x="490" y="122" font-family="'Segoe UI',sans-serif" font-size="8.5" letter-spacing="1.2" fill="#71717A">TOTAL DEDUCTIONS</text>
+    <text x="490" y="154" font-family="monospace" font-size="21" font-weight="700" fill="#FBBF24">₹1.28L</text>
+
+    <rect x="708" y="98" width="222" height="82" rx="13" fill="#121218" stroke="#FFFFFF" stroke-opacity="0.07"/>
+    <text x="728" y="122" font-family="'Segoe UI',sans-serif" font-size="8.5" letter-spacing="1.2" fill="#71717A">NET DISBURSEMENT</text>
+    <text x="728" y="154" font-family="monospace" font-size="21" font-weight="700" fill="#4ADE80">₹6.86L</text>
+
+    <rect x="946" y="98" width="218" height="82" rx="13" fill="#121218" stroke="#6366F1" stroke-opacity="0.28"/>
+    <text x="966" y="122" font-family="'Segoe UI',sans-serif" font-size="8.5" letter-spacing="1.2" fill="#71717A">EMPLOYER COST</text>
+    <text x="966" y="154" font-family="monospace" font-size="21" font-weight="700" fill="#A5B4FC">₹8.71L</text>
+  </g>
+
+  <!-- Payroll run table -->
+  <rect x="232" y="198" width="932" height="270" rx="13" fill="#121218" stroke="#FFFFFF" stroke-opacity="0.07"/>
+  <text x="254" y="226" font-family="'Segoe UI',sans-serif" font-size="12.5" font-weight="600" fill="#FAFAFA">Payroll run — 2026-08</text>
+  <text x="254" y="242" font-family="'Segoe UI',sans-serif" font-size="9" fill="#71717A">EPF, ESI, professional tax and TDS computed per statute</text>
+  <rect x="1042" y="212" width="100" height="21" rx="10.5" fill="#6366F1" opacity="0.15"/>
+  <text x="1092" y="226" font-family="'Segoe UI',sans-serif" font-size="9.5" fill="#A5B4FC" text-anchor="middle">9 payslips</text>
+  <line x1="232" y1="256" x2="1164" y2="256" stroke="#FFFFFF" stroke-opacity="0.07"/>
+
+  <g font-family="'Segoe UI',sans-serif" font-size="8.5" letter-spacing="0.9" fill="#71717A">
+    <text x="254" y="276">EMPLOYEE</text><text x="452" y="276">STATE</text><text x="556" y="276">GROSS</text>
+    <text x="666" y="276">EPF</text><text x="756" y="276">ESI</text><text x="840" y="276">PT</text>
+    <text x="918" y="276">TDS</text><text x="1050" y="276">NET PAY</text>
+  </g>
+
+  <!-- Row 1 -->
+  <circle cx="266" cy="300" r="11" fill="#3B2A5C"/>
+  <text x="266" y="304" font-family="'Segoe UI',sans-serif" font-size="9" fill="#C4B5FD" text-anchor="middle">AK</text>
+  <text x="286" y="298" font-family="'Segoe UI',sans-serif" font-size="10.5" font-weight="500" fill="#FAFAFA">Ananya Krishnan</text>
+  <text x="286" y="311" font-family="monospace" font-size="8.5" fill="#52525B">MER-0001</text>
+  <text x="452" y="304" font-family="'Segoe UI',sans-serif" font-size="10" fill="#A1A1AA">Karnataka</text>
+  <text x="556" y="304" font-family="monospace" font-size="10" fill="#FAFAFA">₹2,40,000</text>
+  <text x="666" y="304" font-family="monospace" font-size="10" fill="#A1A1AA">₹1,800</text>
+  <text x="756" y="304" font-family="monospace" font-size="10" fill="#3F3F46">—</text>
+  <text x="840" y="304" font-family="monospace" font-size="10" fill="#A1A1AA">₹200</text>
+  <text x="918" y="304" font-family="monospace" font-size="10" fill="#A1A1AA">₹51,220</text>
+  <text x="1050" y="304" font-family="monospace" font-size="10" font-weight="600" fill="#4ADE80">₹1,86,780</text>
+  <line x1="232" y1="320" x2="1164" y2="320" stroke="#FFFFFF" stroke-opacity="0.05"/>
+
+  <!-- Row 2 -->
+  <circle cx="266" cy="344" r="11" fill="#1E3A5C"/>
+  <text x="266" y="348" font-family="'Segoe UI',sans-serif" font-size="9" fill="#93C5FD" text-anchor="middle">RD</text>
+  <text x="286" y="342" font-family="'Segoe UI',sans-serif" font-size="10.5" font-weight="500" fill="#FAFAFA">Rohan Deshmukh</text>
+  <text x="286" y="355" font-family="monospace" font-size="8.5" fill="#52525B">MER-0002</text>
+  <text x="452" y="348" font-family="'Segoe UI',sans-serif" font-size="10" fill="#A1A1AA">Maharashtra</text>
+  <text x="556" y="348" font-family="monospace" font-size="10" fill="#FAFAFA">₹1,20,000</text>
+  <text x="666" y="348" font-family="monospace" font-size="10" fill="#A1A1AA">₹1,800</text>
+  <text x="756" y="348" font-family="monospace" font-size="10" fill="#3F3F46">—</text>
+  <text x="840" y="348" font-family="monospace" font-size="10" fill="#A1A1AA">₹200</text>
+  <text x="918" y="348" font-family="monospace" font-size="10" fill="#A1A1AA">₹14,404</text>
+  <text x="1050" y="348" font-family="monospace" font-size="10" font-weight="600" fill="#4ADE80">₹1,03,596</text>
+  <line x1="232" y1="364" x2="1164" y2="364" stroke="#FFFFFF" stroke-opacity="0.05"/>
+
+  <!-- Row 3: ESI applies -->
+  <rect x="232" y="364" width="932" height="44" fill="#22C55E" opacity="0.04"/>
+  <circle cx="266" cy="388" r="11" fill="#2A4A3C"/>
+  <text x="266" y="392" font-family="'Segoe UI',sans-serif" font-size="9" fill="#86EFAC" text-anchor="middle">IQ</text>
+  <text x="286" y="386" font-family="'Segoe UI',sans-serif" font-size="10.5" font-weight="500" fill="#FAFAFA">Imran Qureshi</text>
+  <text x="286" y="399" font-family="monospace" font-size="8.5" fill="#52525B">MER-0004</text>
+  <text x="452" y="392" font-family="'Segoe UI',sans-serif" font-size="10" fill="#A1A1AA">Gujarat</text>
+  <text x="556" y="392" font-family="monospace" font-size="10" fill="#FAFAFA">₹20,000</text>
+  <text x="666" y="392" font-family="monospace" font-size="10" fill="#A1A1AA">₹1,440</text>
+  <text x="756" y="392" font-family="monospace" font-size="10" fill="#86EFAC">₹150</text>
+  <text x="840" y="392" font-family="monospace" font-size="10" fill="#A1A1AA">₹200</text>
+  <text x="918" y="392" font-family="monospace" font-size="10" fill="#3F3F46">—</text>
+  <text x="1050" y="392" font-family="monospace" font-size="10" font-weight="600" fill="#4ADE80">₹18,210</text>
+  <line x1="232" y1="408" x2="1164" y2="408" stroke="#FFFFFF" stroke-opacity="0.05"/>
+
+  <!-- Row 4: no PT state -->
+  <circle cx="266" cy="432" r="11" fill="#4A2A3C"/>
+  <text x="266" y="436" font-family="'Segoe UI',sans-serif" font-size="9" fill="#F9A8D4" text-anchor="middle">AS</text>
+  <text x="286" y="430" font-family="'Segoe UI',sans-serif" font-size="10.5" font-weight="500" fill="#FAFAFA">Aditi Sharma</text>
+  <text x="286" y="443" font-family="monospace" font-size="8.5" fill="#52525B">MER-0007</text>
+  <text x="452" y="436" font-family="'Segoe UI',sans-serif" font-size="10" fill="#A1A1AA">Delhi</text>
+  <text x="556" y="436" font-family="monospace" font-size="10" fill="#FAFAFA">₹55,000</text>
+  <text x="666" y="436" font-family="monospace" font-size="10" fill="#A1A1AA">₹1,800</text>
+  <text x="756" y="436" font-family="monospace" font-size="10" fill="#3F3F46">—</text>
+  <text x="840" y="436" font-family="monospace" font-size="10" fill="#3F3F46">—</text>
+  <text x="918" y="436" font-family="monospace" font-size="10" fill="#A1A1AA">₹2,158</text>
+  <text x="1050" y="436" font-family="monospace" font-size="10" font-weight="600" fill="#4ADE80">₹51,042</text>
+
+  <!-- Payslip detail panel -->
+  <rect x="232" y="486" width="452" height="238" rx="13" fill="#121218" stroke="#FFFFFF" stroke-opacity="0.07"/>
+  <text x="254" y="514" font-family="'Segoe UI',sans-serif" font-size="12" font-weight="600" fill="#FAFAFA">Deductions — traced to statute</text>
+  <line x1="232" y1="528" x2="684" y2="528" stroke="#FFFFFF" stroke-opacity="0.07"/>
+
+  <text x="254" y="552" font-family="'Segoe UI',sans-serif" font-size="10.5" fill="#A1A1AA">EPF (employee)</text>
+  <text x="662" y="552" font-family="monospace" font-size="10.5" fill="#FAFAFA" text-anchor="end">₹1,440</text>
+  <text x="254" y="566" font-family="'Segoe UI',sans-serif" font-size="8.5" fill="#52525B">12% of ₹12,000 (basic + DA, capped at ₹15,000)</text>
+
+  <text x="254" y="594" font-family="'Segoe UI',sans-serif" font-size="10.5" fill="#A1A1AA">ESI (employee)</text>
+  <text x="662" y="594" font-family="monospace" font-size="10.5" fill="#FAFAFA" text-anchor="end">₹150</text>
+  <text x="254" y="608" font-family="'Segoe UI',sans-serif" font-size="8.5" fill="#52525B">0.75% of gross ₹20,000</text>
+
+  <text x="254" y="636" font-family="'Segoe UI',sans-serif" font-size="10.5" fill="#A1A1AA">Professional tax</text>
+  <text x="662" y="636" font-family="monospace" font-size="10.5" fill="#FAFAFA" text-anchor="end">₹200</text>
+  <text x="254" y="650" font-family="'Segoe UI',sans-serif" font-size="8.5" fill="#52525B">Gujarat slab for gross ₹20,000</text>
+
+  <line x1="254" y1="670" x2="662" y2="670" stroke="#FFFFFF" stroke-opacity="0.07"/>
+  <text x="254" y="692" font-family="'Segoe UI',sans-serif" font-size="10.5" font-weight="600" fill="#FAFAFA">Total</text>
+  <text x="662" y="692" font-family="monospace" font-size="11" font-weight="700" fill="#FBBF24" text-anchor="end">₹1,790</text>
+  <text x="254" y="712" font-family="'Segoe UI',sans-serif" font-size="8" fill="#3F3F46">EPF &amp; MP Act 1952 · ESI Act 1948 · state PT legislation</text>
+
+  <!-- Policy assistant panel -->
+  <rect x="700" y="486" width="464" height="238" rx="13" fill="#121218" stroke="#A855F7" stroke-opacity="0.22"/>
+  <text x="722" y="514" font-family="'Segoe UI',sans-serif" font-size="12" font-weight="600" fill="#FAFAFA">Policy assistant</text>
+  <rect x="1010" y="500" width="132" height="20" rx="10" fill="#A855F7" opacity="0.15"/>
+  <text x="1076" y="514" font-family="'Segoe UI',sans-serif" font-size="8.5" fill="#D8B4FE" text-anchor="middle">RULES ENGINE · NOT LLM</text>
+  <line x1="700" y1="528" x2="1164" y2="528" stroke="#FFFFFF" stroke-opacity="0.07"/>
+
+  <rect x="722" y="542" width="420" height="26" rx="8" fill="#0A0A0F" stroke="#FFFFFF" stroke-opacity="0.08"/>
+  <text x="736" y="559" font-family="'Segoe UI',sans-serif" font-size="10" fill="#A1A1AA">Am I eligible for gratuity?</text>
+
+  <text x="722" y="588" font-family="'Segoe UI',sans-serif" font-size="10.5" fill="#FAFAFA">You are eligible for approximately ₹1,96,154.</text>
+
+  <rect x="722" y="600" width="420" height="82" rx="9" fill="#0A0A0F" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <g font-family="'Segoe UI',sans-serif" font-size="9">
+    <text x="736" y="620" fill="#71717A">Last drawn basic + DA</text>
+    <text x="1128" y="620" font-family="monospace" fill="#FAFAFA" text-anchor="end">₹68,000</text>
+    <text x="736" y="640" fill="#71717A">Service</text>
+    <text x="1128" y="640" font-family="monospace" fill="#FAFAFA" text-anchor="end">7.2 years, counted as 7</text>
+    <text x="736" y="660" fill="#71717A">Formula</text>
+    <text x="1128" y="660" font-family="monospace" fill="#FAFAFA" text-anchor="end">₹68,000 × 15 ÷ 26 × 7</text>
+  </g>
+  <text x="736" y="676" font-family="'Segoe UI',sans-serif" font-size="8.5" fill="#52525B">Payment of Gratuity Act 1972, Section 4</text>
+
+  <rect x="722" y="692" width="420" height="22" rx="7" fill="#F59E0B" opacity="0.10"/>
+  <text x="736" y="707" font-family="'Segoe UI',sans-serif" font-size="8.5" fill="#FBBF24">Calculated on current salary. Actual uses last drawn at exit.</text>
+</svg>
